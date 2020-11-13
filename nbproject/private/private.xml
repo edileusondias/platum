@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/DAO/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/relatorioMatricula.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/registrarFrequencianota.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastrarTurma.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/welcomePrimefaces.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastroProfissional.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/homeRealizarinscricao.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastroAluno.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/index.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastroUsuario.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/Beans/UsuarioBean.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/Beans/LoginBean.java</file>
+        </group>
     </open-files>
 </project-private>
