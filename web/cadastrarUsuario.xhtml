@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Cadastro de Usuário</title>
+
+        
+    </h:head>
+    <h:body>
+        <DIV>
+            <h:form>
+                <p:panel header="Cadastro Usuário" >
+
+                    <h:panelGrid columns="2">
+
+                        <h:outputText value = "Nome" />
+                        <p:inputText size ="50" type="text"/>
+                        <h:outputText value = "Login" />
+                        <p:inputText size ="50" type="text"/>
+                        <h:outputText value = "Senha" />
+                        <p:inputText size ="50" type="text"/>              
+                        <h:outputText value = "Perfil" />
+                        <h:selectOneMenu style="width: 435px;"> 
+                            <f:selectItem itemValue = "Aluno" itemLabel = "Aluno" /> 
+                            <f:selectItem itemValue = "Professor" itemLabel = "Professor" /> 
+                        </h:selectOneMenu>
+                       
+                    </h:panelGrid>
+
+                </p:panel>
+                
+                 <p:button  value="Salvar"/>
+                  <p:button  value="Voltar"/>
+
+            </h:form>
+        </DIV>  
+    </h:body>
+</html>
+

@@ -20,7 +20,7 @@ public class CadastroProfissionalBean {
     private String nome;
     private String matricula;
     private String CPF;
-    private Integer RG;
+    private String RG;
     private Date datanascimento;
     private String nomemae;
     private String sexo;
@@ -86,11 +86,11 @@ public class CadastroProfissionalBean {
         this.CPF = CPF;
     }
 
-    public Integer getRG() {
+    public String getRG() {
         return RG;
     }
 
-    public void setRG(Integer RG) {
+    public void setRG(String RG) {
         this.RG = RG;
     }
 
