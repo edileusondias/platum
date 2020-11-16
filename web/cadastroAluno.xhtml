@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Cadastro de Paciente</title>
+    </h:head>
+    <h:body>
+        <div>
+            <h:form >
+                <p:panel>
+
+
+                    <h:panelGrid columns="4">
+                        <p:outputLabel  value="CPF" />
+                        <p:inputMask  mask="999.999.999-99"/>
+
+                        <p:outputLabel  value="RG" />
+                        <p:inputMask  mask="99999999-99"/>
+
+
+                        <p:outputLabel value="Nome completo" />
+                        <p:inputText />
+
+                        <p:outputLabel value="Data Nasc." />
+                        <p:inputMask id="date" mask="99/99/9999"/>
+
+                        <p:outputLabel value="Sexo" />
+                        <p:selectOneRadio id="console">
+                            <f:selectItem itemLabel="Masculino" itemValue="M" />
+                            <f:selectItem itemLabel="Feminino" itemValue="F" />
+                            <f:selectItem itemLabel="Indefinido" itemValue="I" />
+
+                        </p:selectOneRadio>
+
+                        <p:outputLabel value="Nome Mãe" />
+                        <p:inputText />
+
+                        <p:outputLabel value="Nome Pai" />
+                        <p:inputText />
+
+                        <p:outputLabel  value="Celular:" />
+                        <p:inputMask mask="(99) 99999-9999"/>
+
+                        <p:outputLabel  value="CEP" />
+                        <p:inputMask  mask="99.999-999"/>
+
+                        <p:outputLabel value="Logradouro" />
+                        <p:inputText />
+
+                        <p:outputLabel  value="Número" />
+                        <p:inputMask  mask="99999"/>
+
+                        <p:outputLabel value="Bairro" />
+                        <p:inputText />
+
+                        <p:outputLabel value="E-mail" />
+                        <p:inputText />
+
+                        <p:outputLabel value="Matrícula:" />
+                        <p:inputMask  mask="99999"/>
+
+
+                        <h:outputLabel value="Curso" />
+                        <h:selectOneMenu id="console" value="" style="width:230px">
+                            <f:selectItem itemLabel="Administração" itemValue="" />
+                            <f:selectItem itemLabel="Análise de Sistema" itemValue="Xbox One" />
+                            <f:selectItem itemLabel="Desenvolvimento Web" itemValue="PS4" />
+                            <f:selectItem itemLabel="Desenvolvimento Java" itemValue="Wii U" />
+                        </h:selectOneMenu>
+
+                          <h:outputLabel value="Disciplina" />
+                        <h:selectOneMenu id="console" value="" style="width:230px">
+                            <f:selectItem itemLabel="Conceito" itemValue="" />
+                            <f:selectItem itemLabel="PHP" itemValue="Xbox One" />
+                            <f:selectItem itemLabel="Web" itemValue="PS4" />
+                            <f:selectItem itemLabel="Java" itemValue="Wii U" />
+                        </h:selectOneMenu>
+                          
+                            <h:outputLabel value="Turma" />
+                        <h:selectOneMenu id="console" value="" style="width:230px">
+                            <f:selectItem itemLabel="A" itemValue="" />
+                            <f:selectItem itemLabel="B" itemValue="Xbox One" />
+                            <f:selectItem itemLabel="C" itemValue="PS4" />
+                            <f:selectItem itemLabel="D" itemValue="Wii U" />
+                        </h:selectOneMenu>
+                        
+                    </h:panelGrid>
+
+
+                </p:panel>
+                <p:button value="Cadastrar">
+                </p:button>
+
+            </h:form>
+
+
+        </div>
+
+    </h:body>
+
+</html>
+

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Cadastro Profissional</title>
+
+    </h:head>
+    <style>
+    </style>
+
+    <h:body>
+
+        <h:form>
+            <p:panel header="Cadastro Profissional" >
+            
+            
+                <h:panelGrid columns="4">
+
+                    <p:outputLabel  value="CPF"  />
+                    <p:inputText id="CPF"  />
+
+                    <p:outputLabel value="RG" />
+                    <p:inputText id="RG" />
+
+                    <p:outputLabel  value="Matricula" />
+                    <p:inputText id="Matricula" />
+
+                    <p:outputLabel  value="Função" />
+                    <p:inputText id="Função" />
+
+                    <p:outputLabel  value="Nome Completo" />
+                    <p:inputText id="NomeCompleto" />
+
+                    <p:outputLabel  value="Data Nascimento: " />
+                    <p:inputMask id="date" value="#{maskView.date}" mask="99/99/9999"/>
+
+                    <p:outputLabel  value="Nome da Mãe:" />
+                    <p:inputText id="nomeMae" />
+
+                    <p:outputLabel  value="Nome da Pai:" />
+                    <p:inputText id="nomePai" />
+
+                    <p:outputLabel  value="Sexo:" />
+                    <p:inputText id="sexo" />
+
+                    <p:outputLabel  value="Telefone: " />
+                    <p:inputMask id="telefone" value="#{maskView.date}" mask="(99)99999-9999"/>
+
+                    <p:outputLabel  value="CEP:"/>
+                    <p:inputText id="CEP"/>
+
+                    <p:outputLabel  value="Logradouro" />
+                    <p:inputText id="Logradouro" />
+
+                    <p:outputLabel  value="Nº" />
+                    <p:inputText id="numero" />
+
+                    <p:outputLabel  value="Bairro" />
+                    <p:inputText id="bairro" />
+
+                </h:panelGrid>
+
+            </p:panel>
+            <p:button  value="Salvar"/>
+            <p:button  value="Voltar"/>
+
+        </h:form>
+
+    </h:body>
+</html>
