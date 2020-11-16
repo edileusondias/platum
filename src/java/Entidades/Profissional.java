@@ -10,19 +10,17 @@ public class Profissional {
     private String nome;
     private String matricula;
     private String CPF;
-    private Integer RG;
+    private String RG;
     private Date datanascimento;
     private String nomemae;
     private String sexo;
-    private Integer telefone;
-    private Integer CEP;
+    private String telefone;
+    private String CEP;
     private String Logradouro;
-    private Integer numero;
+    private String numero;
     private String bairro;
 
-    public Profissional (Integer id, String nome, String matricula, String CPF, Integer RG, Date datanascimento, String nomemae, String sexo,Integer telefone, Integer CEP, String logradouro, Integer numero, String bairro){
-       
-        
+    public Profissional (Integer id, String nome, String matricula, String CPF, String RG, Date datanascimento, String nomemae, String sexo,String telefone, String CEP, String logradouro, String numero, String bairro){        
         this.nome = nome;
         this.matricula = matricula;
         this.CPF = CPF;
@@ -65,12 +63,12 @@ public class Profissional {
         this.CPF = CPF;
     }
 
-    public Integer getRG() {
+    public String getRG() {
         return RG;
     }
 
     public void setRG(Integer RG) {
-        this.RG = RG;
+        this.setRG(RG);
     }
 
     public Date getDatanascimento() {
@@ -97,20 +95,20 @@ public class Profissional {
         this.sexo = sexo;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
     public void setTelefone(Integer telefone) {
-        this.telefone = telefone;
+        this.setTelefone(telefone);
     }
 
-    public Integer getCEP() {
+    public String getCEP() {
         return CEP;
     }
 
     public void setCEP(Integer CEP) {
-        this.CEP = CEP;
+        this.setCEP(CEP);
     }
 
     public String getLogradouro() {
@@ -121,12 +119,12 @@ public class Profissional {
         this.Logradouro = Logradouro;
     }
 
-    public Integer getNumero() {
+    public String getNumero() {
         return numero;
     }
 
     public void setNumero(Integer numero) {
-        this.numero = numero;
+        this.setNumero(numero);
     }
 
     public String getBairro() {
@@ -135,6 +133,26 @@ public class Profissional {
 
     public void setBairro(String bairro) {
         this.bairro = bairro;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setRG(String RG) {
+        this.RG = RG;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public void setCEP(String CEP) {
+        this.CEP = CEP;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 }
 

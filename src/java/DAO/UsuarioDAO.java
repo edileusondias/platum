@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UsuarioDAO {
-        /* Métodos */
+    /* Métodos */
     public static Usuario buscar(String login, String senha) throws Exception
     {
         Connection conexao = Conexao.getConnection();

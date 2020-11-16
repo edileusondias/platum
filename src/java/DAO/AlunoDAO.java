@@ -7,10 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author Cristiane Castilho
- */
 public class AlunoDAO {
 
     /* Métodos */
@@ -28,6 +24,5 @@ public class AlunoDAO {
             throw new Exception("Erro na execução do SQL - busca de usuário", ex);
         }
         return false;
-
     }
 }
