@@ -5,15 +5,20 @@
         <group>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/DAO/UsuarioDAO.java</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/relatorioMatricula.xhtml</file>
-            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/registrarFrequencianota.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/Entidades/Aluno.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/nbproject/private/private.properties</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastrarTurma.xhtml</file>
-            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/welcomePrimefaces.xhtml</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastroProfissional.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastroUsuario.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/DAO/AlunoDAO.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/registrarFrequencianota.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/welcomePrimefaces.xhtml</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/homeRealizarinscricao.xhtml</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastroAluno.xhtml</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/index.xhtml</file>
-            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/web/cadastroUsuario.xhtml</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/Beans/UsuarioBean.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/Entidades/Usuario.java</file>
             <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/Platumgit2/src/java/Beans/LoginBean.java</file>
         </group>
     </open-files>
