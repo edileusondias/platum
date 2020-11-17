@@ -14,7 +14,7 @@ import org.primefaces.context.RequestContext;
 
 @Named(value = "cadastroProfissionalBean")
 @ViewScoped
-public class CadastroProfissionalBean {
+public class CadastroProfissionalBean implements Serializable {
 
     private Integer id;
     private String nome;
