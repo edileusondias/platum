@@ -1,7 +1,10 @@
 package Beans;
 
+import Entidades.Profissional;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -11,7 +14,7 @@ import org.primefaces.context.RequestContext;
 
 @Named(value = "cadastroProfissionalBean")
 @ViewScoped
-public class CadastroProfissionalBean implements Serializable {
+public class CadastroProfissionalBean {
 
     private Integer id;
     private String nome;
