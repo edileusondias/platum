@@ -8,9 +8,34 @@
     
     <ui:define name="content">
         <img src="https://www.unijorge.edu.br/conteudo/cur/004/cur/img/int/000241.jpg" alt="" />
-    </ui:define>
-        
+              <h:form>
+                                       
+
+            <p:panel header="Inscreva-se Aqui" style="width: 400px; margin: 2 auto;">
             
+                 <h:panelGrid columns="2">
+
+                    <p:outputLabel  value="Nome Completo"  />
+                    <p:inputText id="NomeCompleto"  />
+
+                    <p:outputLabel  value="E-mail" />
+                    <p:inputText id="Email" />
+
+                    <p:outputLabel  value="Telefone" />
+                    <p:inputText id="Telefone" />
+
+                    <p:outputLabel  value="CPF" />
+                    <p:inputText id="CPF" />
+
+                    </h:panelGrid>
+
+            </p:panel>
+            <p:button  value="Enviar"/>
+            
+        </h:form>  
+               
+    </ui:define>
+   
 </ui:decorate>
 
 
