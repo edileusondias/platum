@@ -1,48 +1,41 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3c.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-    <h:head>
-        <title></title>
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template/layout.xhtml"
+             xmlns:p="http://primefaces.org/ui">
 
-    </h:head>
-    <style>
-    </style>
+    <ui:define name="content">
 
-    <h:body>
+        <div>
+            <h:form >
 
-        <h:form>
-                                       
+                <p:panel header="Inscreva-se Aqui" style="width: 400px; margin: 2 auto;">
 
-            <p:panel header="Inscreva-se Aqui" style="width: 400px; margin: 2 auto;">
+                    <h:panelGrid columns="2">
 
-                <h:panelGrid columns="2">
+                        <p:outputLabel  value="Nome Completo"  />
+                        <p:inputText id="NomeCompleto"  />
 
-                    <p:outputLabel  value="Nome Completo"  />
-                    <p:inputText id="NomeCompleto"  />
+                        <p:outputLabel  value="E-mail" />
+                        <p:inputText id="Email" />
 
-                    <p:outputLabel  value="E-mail" />
-                    <p:inputText id="Email" />
+                        <p:outputLabel  value="Telefone" />
+                        <p:inputText id="Telefone" />
 
-                    <p:outputLabel  value="Telefone" />
-                    <p:inputText id="Telefone" />
-
-                    <p:outputLabel  value="CPF" />
-                    <p:inputText id="CPF" />
+                        <p:outputLabel  value="CPF" />
+                        <p:inputText id="CPF" />
 
                     </h:panelGrid>
 
-            </p:panel>
-            <p:button  value="Enviar"/>
-            
+                </p:panel>
+                <p:button  value="Enviar"/>
 
-        </h:form>
+            </h:form>
 
-    </h:body>
-</html>
+        </div>
+    </ui:define>
 
-
-
+</ui:decorate>

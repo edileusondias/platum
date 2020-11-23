@@ -25,15 +25,21 @@ public class LoginBean implements Serializable {
         
     }
     
-    public void acessar() {
+    public String acessar() {
         try {
             //tratar o que o usuario digitou
             //chamar o model para pesquisar o usuario
-            Usuario.pesquisarUsuario(login,senha);
+            Usuario usuario = Usuario.pesquisarUsuario(login,senha);
+            if(usuario != null)
+                return "home";
+            else
+                addMessage("Usuário ou senha incorretos.");
+                return null;
             //retornar erro ou direcionar para a pagina do menu principal
         } catch (Exception ex) {
             addMessage("Alguma coisa deu errado!");
             Logger.getLogger(LoginBean.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
         }
     }
     
