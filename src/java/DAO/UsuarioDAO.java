@@ -20,7 +20,7 @@ public class UsuarioDAO {
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
                 Usuario usuario = new Usuario(resultSet.getString("nome"), resultSet.getString("login"), 
-                                                resultSet.getString("senha"), resultSet.getInt("tipo_usuario"));
+                                                resultSet.getString("senha"), resultSet.getInt("tipousuario"));
                 return usuario;
             }
         }catch(SQLException ex){

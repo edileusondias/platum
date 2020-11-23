@@ -46,12 +46,7 @@ public class Usuario {
     }
 
     public void setSenha(String senha) throws Exception {
-        if(senha.length()<8)
-            throw new Exception("o tamanho da senha deve ser maior ou igual a 8 caracteres");
-        else if(senha.contains("12345678"))
-            throw new Exception("a senha não pode ser 12345678");
-        else
-            this.senha = senha;
+        this.senha = senha;
     }
 
     public Integer getTipoUsuario() {
