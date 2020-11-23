@@ -1,18 +1,19 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:decorate xmlns="http://www.w3.org/1999/xhtml"
-             xmlns:h="http://xmlns.jcp.org/jsf/html"
-             xmlns:f="http://java.sun.com/jsf/core"
-             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-             template="template/layout.xhtml"
-             xmlns:p="http://primefaces.org/ui">
-
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      template="template/layout.xhtml"
+      xmlns:p="http://primefaces.org/ui">
+    
     <ui:define name="content">
-        <div>
-            <h:form>
-                <p:panel header="Cadastro Aluno" >
 
-                    <h:panelGrid columns="4">
+        <div>
+            <h:form >
+                <p:panel header="Cadastrar Aluno" style="margin: 10 auto;">
+
+                    <h:panelGrid columns="4" cellpadding="2">
 
                         <p:outputLabel value="Nome completo" />
                         <p:inputText />
@@ -65,7 +66,7 @@
 
                         <h:outputLabel value="Curso" />
                         <h:selectOneMenu id="console" value="" style="width:230px">
-                            <f:selectItem itemLabel="Administração" itemValue="" />
+                            <f:selectItem itemLabel="Selecione" itemValue="" />
                             <f:selectItem itemLabel="Análise de Sistema" itemValue="Xbox One" />
                             <f:selectItem itemLabel="Desenvolvimento Web" itemValue="PS4" />
                             <f:selectItem itemLabel="Desenvolvimento Java" itemValue="Wii U" />
@@ -73,7 +74,7 @@
 
                         <h:outputLabel value="Disciplina" />
                         <h:selectOneMenu id="console" value="" style="width:230px">
-                            <f:selectItem itemLabel="Conceito" itemValue="" />
+                            <f:selectItem itemLabel="Selecione" itemValue="" />
                             <f:selectItem itemLabel="PHP" itemValue="Xbox One" />
                             <f:selectItem itemLabel="Web" itemValue="PS4" />
                             <f:selectItem itemLabel="Java" itemValue="Wii U" />
@@ -81,16 +82,22 @@
 
                         <h:outputLabel value="Turma" />
                         <h:selectOneMenu id="console" value="" style="width:230px">
-                            <f:selectItem itemLabel="A" itemValue="" />
-                            <f:selectItem itemLabel="B" itemValue="Xbox One" />
-                            <f:selectItem itemLabel="C" itemValue="PS4" />
-                            <f:selectItem itemLabel="D" itemValue="Wii U" />
+                            <f:selectItem itemLabel="Selecione" itemValue="" />
+                            <f:selectItem itemLabel="A" itemValue="Xbox One" />
+                            <f:selectItem itemLabel="B" itemValue="PS4" />
+                            <f:selectItem itemLabel="C" itemValue="Wii U" />
                         </h:selectOneMenu>
                     </h:panelGrid>
                 </p:panel>
-                <p:button value="Cadastrar">
-                </p:button>
+                <p:button  value="Limpar"/>
+                <p:button value="Cadastrar"/>
+                <p:button  value="Voltar"/>
+                
             </h:form>
         </div>
-    </ui:define>
+
+     </ui:define>
+        
+            
 </ui:decorate>
+
