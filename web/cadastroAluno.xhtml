@@ -1,19 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template/layout.xhtml"
+             xmlns:p="http://primefaces.org/ui">
 
-    <h:head>
-        <title>Cadastro de Paciente</title>
-    </h:head>
-    <h:body>
+    <ui:define name="content">
         <div>
-            <h:form >
-                <p:panel>
-
+            <h:form>
+                <p:panel header="Cadastro Aluno" >
 
                     <h:panelGrid columns="4">
 
@@ -35,8 +32,6 @@
 
                             <p:outputLabel  value="RG" />
                             <p:inputMask  mask="99999999-99"/>
-
-
 
                         </p:selectOneRadio>
 
@@ -91,20 +86,11 @@
                             <f:selectItem itemLabel="C" itemValue="PS4" />
                             <f:selectItem itemLabel="D" itemValue="Wii U" />
                         </h:selectOneMenu>
-
                     </h:panelGrid>
-
-
                 </p:panel>
                 <p:button value="Cadastrar">
                 </p:button>
-
             </h:form>
-
-
         </div>
-
-    </h:body>
-
-</html>
-
+    </ui:define>
+</ui:decorate>
