@@ -3,89 +3,90 @@ package Entidades;
 import java.util.Date;
 
 
-/**
- *
- * @author Cristiane Castilho
- */
 public class Turma {
-
-    /**
-     * @return the iddisciplina
-     */
-    public Integer getIddisciplina() {
-        return iddisciplina;
-    }
-
-    /**
-     * @param iddisciplina the iddisciplina to set
-     */
-    public void setIddisciplina(Integer iddisciplina) {
-        this.iddisciplina = iddisciplina;
-    }
-
-    /**
-     * @return the iddocente
-     */
-    public Integer getIddocente() {
-        return iddocente;
-    }
-
-    /**
-     * @param iddocente the iddocente to set
-     */
-    public void setIddocente(Integer iddocente) {
-        this.iddocente = iddocente;
-    }
-
-    /**
-     * @return the idsemestre
-     */
-    public Integer getIdsemestre() {
-        return idsemestre;
-    }
-
-    /**
-     * @param idsemestre the idsemestre to set
-     */
-    public void setIdsemestre(Integer idsemestre) {
-        this.idsemestre = idsemestre;
-    }
-
-    /**
-     * @return the idturno
-     */
-    public Integer getIdturno() {
-        return idturno;
-    }
-
-    /**
-     * @param idturno the idturno to set
-     */
-    public void setIdturno(Integer idturno) {
-        this.idturno = idturno;
-    }
-
-    public Turma() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static void Salvar(Turma turma) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
   /* Atributos */
-    private Integer iddisciplina;
-    private Integer iddocente;
-    private Integer idsemestre;
-    private Integer idturno;     
+    private Integer disciplinaId;
+    private Integer semestreId;
+    private Integer turmaId;
+    private Integer docenteId;
             
-            
-    public Turma (Integer iddisciplina, Integer idsemestre, Integer iddocente, Integer idturno) throws Exception {
-      setIddisciplina (iddisciplina) ;
-      setIdsemestre (idsemestre) ;
-      setIddocente (iddocente) ;
-      setIdturno (idturno) ;
- 
+    public Turma (Integer disciplina, Integer semestre, Integer codturma, Integer docente, Date periodo, String buscar) throws Exception {
+      setDisciplinaId(disciplina) ;
+      setSemestreId(semestre) ;
+      setTurmaId(codturma) ;
+      setDocenteId(docente) ;
+      setPeriodo (periodo) ;
+      
     } 
+
     
-    
+    /**
+     * @return the periodo
+     */
+    public Date getPeriodo() {
+        return periodo;
+    }
+
+    /**
+     * @param periodo the periodo to set
+     */
+    public void setPeriodo(Date periodo) {
+        this.periodo = periodo;
+    }
+
+    /**
+     * @return the disciplinaId
+     */
+    public Integer getDisciplinaId() {
+        return disciplinaId;
+    }
+
+    /**
+     * @param disciplinaId the disciplinaId to set
+     */
+    public void setDisciplinaId(Integer disciplinaId) {
+        this.disciplinaId = disciplinaId;
+    }
+
+    /**
+     * @return the semestreId
+     */
+    public Integer getSemestreId() {
+        return semestreId;
+    }
+
+    /**
+     * @param semestreId the semestreId to set
+     */
+    public void setSemestreId(Integer semestreId) {
+        this.semestreId = semestreId;
+    }
+
+    /**
+     * @return the turmaId
+     */
+    public Integer getTurmaId() {
+        return turmaId;
+    }
+
+    /**
+     * @param turmaId the turmaId to set
+     */
+    public void setTurmaId(Integer turmaId) {
+        this.turmaId = turmaId;
+    }
+
+    /**
+     * @return the docenteId
+     */
+    public Integer getDocenteId() {
+        return docenteId;
+    }
+
+    /**
+     * @param docenteId the docenteId to set
+     */
+    public void setDocenteId(Integer docenteId) {
+        this.docenteId = docenteId;
+    }
 }
