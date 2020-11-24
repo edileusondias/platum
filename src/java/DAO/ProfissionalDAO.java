@@ -14,13 +14,17 @@ public class ProfissionalDAO {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try{
-            ps = conexao.prepareStatement("insert"); // obtem apena uma única informação
+            ps = conexao.prepareStatement("insert into `platum`.`profissional` nome=? matricula=? cpf=? rg=? datanasc=? nomemae=? sexo=? telefone=?"); // obtem apena uma única informação
             ps.setString(1, prof.getNome());
             ps.setString(2, prof.getMatricula());
             ps.setString(3, prof.getCPF());
             ps.setString(4, prof.getRG());
+            ps.setString(5, prof.getDatanasc());
+            ps.setString(6, prof.getNomemae());
+            ps.setString(7, prof.getSexo());
+            ps.setString(8, prof.getTelefone());
             ResultSet resultSet = ps.executeQuery();
-            while (resultSet.next()) {
+             while (resultSet.next()) {
                 return true;
             }
         }catch(SQLException ex){
