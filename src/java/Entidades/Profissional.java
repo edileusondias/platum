@@ -15,11 +15,7 @@ public class Profissional {
     private String nomemae;
     private String sexo;
     private String telefone;
-    private String CEP;
-    private String Logradouro;
-    private String numero;
-    private String bairro;
-
+    
     public Profissional (Integer id, String nome, String matricula, String CPF, String RG, Date datanascimento, String nomemae, String sexo,String telefone, String CEP, String logradouro, String numero, String bairro){        
         this.nome = nome;
         this.matricula = matricula;

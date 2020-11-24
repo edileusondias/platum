@@ -6,22 +6,19 @@ public class Aluno {
   /* Atributos */
     private Integer id;
     private String cpf;
-    private String rg;
-    private Date dataemissao;
-    private String orgaoemissor;
     private String nomecompleto;
     private Date datadenascimento;
     private String nomeMae;
     private String nomePai;
     private String telefone;
-    private String cep;
-    private String logradouro;
-    private String numero;
-    private String bairro;
     private Integer idSexo;
     private String email;
     private String matricula;
     private Integer idStatus;
+    
+    
+    
+    
     
     public Aluno (String cpf, String rg, Date dataemissao, String orgaoemissor, String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, String cep, String logradouro, String numero, String bairro, Integer idsexo, String email, String matricula, Integer idstatus) throws Exception {
        setCpf (cpf) ;

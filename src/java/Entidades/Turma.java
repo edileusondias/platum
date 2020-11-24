@@ -3,91 +3,23 @@ package Entidades;
 import java.util.Date;
 
 
-/**
- *
- * @author Cristiane Castilho
- */
 public class Turma {
   /* Atributos */
-    private Integer disciplina;
-    private Integer semestre;
-    private Integer codturma;
-    private Integer docente;
-    private Date periodo;
-    private String buscar;        
-            
+    private Integer disciplinaId;
+    private Integer semestreId;
+    private Integer turmaId;
+    private Integer docenteId;
             
     public Turma (Integer disciplina, Integer semestre, Integer codturma, Integer docente, Date periodo, String buscar) throws Exception {
-      setDisciplina (disciplina) ;
-      setSemestre (semestre) ;
-      setCodturma (codturma) ;
-      setDocente (docente) ;
+      setDisciplinaId(disciplina) ;
+      setSemestreId(semestre) ;
+      setTurmaId(codturma) ;
+      setDocenteId(docente) ;
       setPeriodo (periodo) ;
-      setBuscar (buscar) ;
       
-    
     } 
 
-    private void set(Integer disciplina) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    /**
-     * @return the disciplina
-     */
-    public Integer getDisciplina() {
-        return disciplina;
-    }
-
-    /**
-     * @param disciplina the disciplina to set
-     */
-    public void setDisciplina(Integer disciplina) {
-        this.disciplina = disciplina;
-    }
-
-    /**
-     * @return the semestre
-     */
-    public Integer getSemestre() {
-        return semestre;
-    }
-
-    /**
-     * @param semestre the semestre to set
-     */
-    public void setSemestre(Integer semestre) {
-        this.semestre = semestre;
-    }
-
-    /**
-     * @return the codturma
-     */
-    public Integer getCodturma() {
-        return codturma;
-    }
-
-    /**
-     * @param codturma the codturma to set
-     */
-    public void setCodturma(Integer codturma) {
-        this.codturma = codturma;
-    }
-
-    /**
-     * @return the docente
-     */
-    public Integer getDocente() {
-        return docente;
-    }
-
-    /**
-     * @param docente the docente to set
-     */
-    public void setDocente(Integer docente) {
-        this.docente = docente;
-    }
-
+    
     /**
      * @return the periodo
      */
@@ -103,18 +35,58 @@ public class Turma {
     }
 
     /**
-     * @return the buscar
+     * @return the disciplinaId
      */
-    public String getBuscar() {
-        return buscar;
+    public Integer getDisciplinaId() {
+        return disciplinaId;
     }
 
     /**
-     * @param buscar the buscar to set
+     * @param disciplinaId the disciplinaId to set
      */
-    public void setBuscar(String buscar) {
-        this.buscar = buscar;
+    public void setDisciplinaId(Integer disciplinaId) {
+        this.disciplinaId = disciplinaId;
     }
-    
-    
+
+    /**
+     * @return the semestreId
+     */
+    public Integer getSemestreId() {
+        return semestreId;
+    }
+
+    /**
+     * @param semestreId the semestreId to set
+     */
+    public void setSemestreId(Integer semestreId) {
+        this.semestreId = semestreId;
+    }
+
+    /**
+     * @return the turmaId
+     */
+    public Integer getTurmaId() {
+        return turmaId;
+    }
+
+    /**
+     * @param turmaId the turmaId to set
+     */
+    public void setTurmaId(Integer turmaId) {
+        this.turmaId = turmaId;
+    }
+
+    /**
+     * @return the docenteId
+     */
+    public Integer getDocenteId() {
+        return docenteId;
+    }
+
+    /**
+     * @param docenteId the docenteId to set
+     */
+    public void setDocenteId(Integer docenteId) {
+        this.docenteId = docenteId;
+    }
 }
