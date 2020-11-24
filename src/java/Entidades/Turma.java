@@ -2,11 +2,6 @@ package Entidades;
 
 import java.util.Date;
 
-
-/**
- *
- * @author Cristiane Castilho
- */
 public class Turma {
 
     /**
