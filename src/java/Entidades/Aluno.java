@@ -4,6 +4,55 @@ import java.util.Date;
 
 public class Aluno {
 
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the idDisciplina
+     */
+    public Integer getIdDisciplina() {
+        return idDisciplina;
+    }
+
+    /**
+     * @param idDisciplina the idDisciplina to set
+     */
+    public void setIdDisciplina(Integer idDisciplina) {
+        this.idDisciplina = idDisciplina;
+    }
+
+    /**
+     * @return the idCurso
+     */
+    public Integer getIdCurso() {
+        return idCurso;
+    }
+
+    /**
+     * @param idCurso the idCurso to set
+     */
+    public void setIdCurso(Integer idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    /**
+     * @return the idTurma
+     */
+    public Integer getIdTurma() {
+        return idTurma;
+    }
+
+    /**
+     * @param idTurma the idTurma to set
+     */
+    public void setIdTurma(Integer idTurma) {
+        this.idTurma = idTurma;
+    }
+
     public static void Salvar(Aluno aluno) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -11,40 +60,32 @@ public class Aluno {
     private Integer id;
     private String cpf;
     private String rg;
-    private Date dataemissao;
-    private String orgaoemissor;
     private String nomecompleto;
     private Date datadenascimento;
     private String nomeMae;
     private String nomePai;
     private String telefone;
-    private String cep;
-    private String logradouro;
-    private String numero;
-    private String bairro;
     private Integer idSexo;
-    private String email;
     private String matricula;
     private Integer idStatus;
+    private Integer idDisciplina;
+    private Integer idCurso;
+    private Integer idTurma;
     
-    public Aluno (String cpf, String rg, Date dataemissao, String orgaoemissor, String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, String cep, String logradouro, String numero, String bairro, Integer idsexo, String email, String matricula, Integer idstatus) throws Exception {
+    public Aluno (String cpf, String rg, String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, Integer idsexo, String matricula, Integer idstatus, Integer iddisciplina, Integer idcurso, Integer idturma ) throws Exception {
        setCpf (cpf) ;
        setRg (rg) ;
-       setDataemissao (dataemissao) ;
-       setOrgaoemissor (orgaoemissor) ;
        setNomecompleto (nomecompleto) ;
        setDatadenascimento(datanascimento) ;
        setNomeMae (nomemae) ;
        setNomePai (nomepai) ;
        setTelefone (telefone) ;
-       setCep (cep) ;
-       setLogradouro (logradouro) ;
-       setNumero (numero) ;
-       setBairro (bairro) ;
        setIdSexo (idsexo) ;
-       setEmail (email) ;
        setMatricula (matricula) ;
-       setIdStatus (idstatus) ;      
+       setIdStatus (idstatus) ;   
+       setIdDisciplina (iddisciplina) ;
+       setIdCurso (idcurso) ;
+       setIdTurma (idturma) ;
     }
 
     public Aluno() {
@@ -69,22 +110,6 @@ public class Aluno {
 
     public void setRg(String rg) {
         this.rg = rg;
-    }
-
-    public Date getDataemissao() {
-        return dataemissao;
-    }
-
-    public void setDataemissao(Date dataemissao) {
-        this.dataemissao = dataemissao;
-    }
-
-    public String getOrgaoemissor() {
-        return orgaoemissor;
-    }
-
-    public void setOrgaoemissor(String orgaoemissor) {
-        this.orgaoemissor = orgaoemissor;
     }
 
     public String getNomecompleto() {
@@ -127,52 +152,12 @@ public class Aluno {
         this.telefone = telefone;
     }
 
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
     public Integer getIdSexo() {
         return idSexo;
     }
 
     public void setIdSexo(Integer idSexo) {
         this.idSexo = idSexo;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getMatricula() {
