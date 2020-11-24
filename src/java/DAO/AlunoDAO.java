@@ -14,7 +14,7 @@ public class AlunoDAO {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try {
-            ps = conexao.prepareStatement("insert into `platum`.`aluno` id=? cpf=? nome=? datanasc=? nomemae=? nomepai=? sexo=? telefone=? status=?");//FIXME
+            ps = conexao.prepareStatement("insert into `platum`.`aluno` id=?, cpf=?, nome=?, datanasc=?, nomemae=?, nomepai=?, sexo=?, telefone=?, status=?");//FIXME
             ps.setString (1, aluno.getId());
             ps.setString (2, aluno.getNome());
             ps.setString (3, aluno.getCPF());
