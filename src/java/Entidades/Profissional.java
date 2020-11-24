@@ -1,9 +1,14 @@
 
 package Entidades;
 
+import DAO.ProfissionalDAO;
 import java.util.Date;
 
 public class Profissional {
+
+    public static void Salvar(Profissional profissional) throws Exception {
+        ProfissionalDAO.salvar(profissional);
+    }
 
     /* Atributos */
     private Integer id;
@@ -15,12 +20,9 @@ public class Profissional {
     private String nomemae;
     private String sexo;
     private String telefone;
-    private String CEP;
-    private String Logradouro;
-    private String numero;
-    private String bairro;
+    
 
-    public Profissional (Integer id, String nome, String matricula, String CPF, String RG, Date datanascimento, String nomemae, String sexo,String telefone, String CEP, String logradouro, String numero, String bairro){        
+    public Profissional (Integer id, String nome, String matricula, String CPF, String RG, Date datanascimento, String nomemae, String sexo, String telefone){        
         this.nome = nome;
         this.matricula = matricula;
         this.CPF = CPF;
@@ -29,10 +31,11 @@ public class Profissional {
         this.nomemae = nomemae;
         this.sexo = sexo;
         this.telefone = telefone;
-        this.CEP = CEP;
-        this.Logradouro = Logradouro;
-        this.numero = numero;
-        this.bairro = bairro;
+       
+    }
+
+    public Profissional() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Integer getId() {
@@ -103,38 +106,6 @@ public class Profissional {
         this.setTelefone(telefone);
     }
 
-    public String getCEP() {
-        return CEP;
-    }
-
-    public void setCEP(Integer CEP) {
-        this.setCEP(CEP);
-    }
-
-    public String getLogradouro() {
-        return Logradouro;
-    }
-
-    public void setLogradouro(String Logradouro) {
-        this.Logradouro = Logradouro;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.setNumero(numero);
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -147,13 +118,10 @@ public class Profissional {
         this.telefone = telefone;
     }
 
-    public void setCEP(String CEP) {
-        this.CEP = CEP;
+    public String getDatanasc() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-}
+   }
 
     

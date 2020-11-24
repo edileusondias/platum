@@ -1,5 +1,6 @@
 package Beans;
 
+import Entidades.Aluno;
 import Entidades.Profissional;
 import java.io.Serializable;
 import java.util.Date;
@@ -14,12 +15,63 @@ import org.primefaces.context.RequestContext;
 
 @Named (value = "CadastroAlunoBean")
 @ViewScoped
-public class CadastroAluno implements Serializable {
+public class CadastroAlunoBean implements Serializable {
 
     /**
      * @return the id
      */
-    public Integer getId() {
+       
+    private Integer id;
+    private String cpf;
+    private String rg;
+    private Date dataemissao;
+    private String orgaoemissor;
+    private String nomecompleto;
+    private Date datadenascimento;
+    private String nomeMae;
+    private String nomePai;
+    private String telefone;
+    private String cep;
+    private String logradouro;
+    private String numero;
+    private String bairro;
+    private Integer idSexo;
+    private String email;
+    private String matricula;
+    private Integer idStatus;
+    
+    /**
+     *
+     */
+    public CadastroAlunoBean(){
+    
+    }
+    
+       @PostConstruct
+    public void init() {
+
+    }
+
+    public void salvar() {
+        Aluno aluno = new Aluno();  
+        try {
+            Aluno.Salvar(aluno);
+        } catch (Exception e) {
+        }
+
+    }
+
+    public void addMessage(String msg) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, msg, null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+        atualizarComponente("msg"); // atualiza o componente de mensagens 
+    }
+
+    public void atualizarComponente(String id) {
+        RequestContext.getCurrentInstance().update(id);
+    }
+    
+     public Integer getId() {
         return id;
     }
 
@@ -267,54 +319,5 @@ public class CadastroAluno implements Serializable {
     public void setIdStatus(Integer idStatus) {
         this.idStatus = idStatus;
     }
-    
-    private Integer id;
-    private String cpf;
-    private String rg;
-    private Date dataemissao;
-    private String orgaoemissor;
-    private String nomecompleto;
-    private Date datadenascimento;
-    private String nomeMae;
-    private String nomePai;
-    private String telefone;
-    private String cep;
-    private String logradouro;
-    private String numero;
-    private String bairro;
-    private Integer idSexo;
-    private String email;
-    private String matricula;
-    private Integer idStatus;
-    
-    /**
-     *
-     */
-    public CadastroAluno(){
-    
-    }
-    
-       @PostConstruct
-    public void init() {
-
-    }
-
-    public void salvar() {
-
-        try {
-            
-        } catch (Exception e) {
-        }
-
-    }
-
-    public void addMessage(String msg) {
-        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, msg, null);
-        FacesContext.getCurrentInstance().addMessage(null, message);
-        atualizarComponente("msg"); // atualiza o componente de mensagens 
-    }
-
-    public void atualizarComponente(String id) {
-        RequestContext.getCurrentInstance().update(id);
-    }
 }
+

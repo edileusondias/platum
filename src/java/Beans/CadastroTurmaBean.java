@@ -1,13 +1,20 @@
-package Entidades;
+package Beans;
 
+import Entidades.Turma;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
+import org.primefaces.context.RequestContext;
 
-
-/**
- *
- * @author Cristiane Castilho
- */
-public class Turma {
+@Named(value = "cadastroTurmaBean")
+@ViewScoped
+public class CadastroTurmaBean implements Serializable {
 
     /**
      * @return the iddisciplina
@@ -65,27 +72,38 @@ public class Turma {
         this.idturno = idturno;
     }
 
-    public Turma() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static void Salvar(Turma turma) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-  /* Atributos */
     private Integer iddisciplina;
     private Integer iddocente;
     private Integer idsemestre;
-    private Integer idturno;     
-            
-            
-    public Turma (Integer iddisciplina, Integer idsemestre, Integer iddocente, Integer idturno) throws Exception {
-      setIddisciplina (iddisciplina) ;
-      setIdsemestre (idsemestre) ;
-      setIddocente (iddocente) ;
-      setIdturno (idturno) ;
- 
-    } 
-    
-    
+    private Integer idturno;
+        
+
+    public CadastroTurmaBean() {
+
+}
+
+ @PostConstruct
+    public void init() {
+
+    }
+
+    public void salvar() {
+        Turma turma = new Turma();
+        try {
+            Turma.Salvar(turma);
+        } catch (Exception e) {
+        }
+
+    }
+
+    public void addMessage(String msg) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, msg, null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+        atualizarComponente("msg"); // atualiza o componente de mensagens 
+    }
+
+    public void atualizarComponente(String id) {
+        RequestContext.getCurrentInstance().update(id);
+    }
+       
 }

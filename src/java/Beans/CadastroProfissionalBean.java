@@ -25,10 +25,7 @@ public class CadastroProfissionalBean implements Serializable {
     private String nomemae;
     private String sexo;
     private Integer telefone;
-    private Integer CEP;
-    private String Logradouro;
-    private Integer numero;
-    private String bairro;
+   
 
     public CadastroProfissionalBean() {
 
@@ -40,9 +37,10 @@ public class CadastroProfissionalBean implements Serializable {
     }
 
     public void salvar() {
-
+        Profissional profissional = new Profissional();
+        
         try {
-            
+            Profissional.Salvar(profissional);
         } catch (Exception e) {
         }
 
@@ -126,35 +124,4 @@ public class CadastroProfissionalBean implements Serializable {
         this.telefone = telefone;
     }
 
-    public Integer getCEP() {
-        return CEP;
-    }
-
-    public void setCEP(Integer CEP) {
-        this.CEP = CEP;
-    }
-
-    public String getLogradouro() {
-        return Logradouro;
-    }
-
-    public void setLogradouro(String Logradouro) {
-        this.Logradouro = Logradouro;
-    }
-
-    public Integer getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.numero = numero;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-}
+   }

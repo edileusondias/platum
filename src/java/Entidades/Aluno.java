@@ -3,6 +3,10 @@ package Entidades;
 import java.util.Date;
 
 public class Aluno {
+
+    public static void Salvar(Aluno aluno) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   /* Atributos */
     private Integer id;
     private String cpf;
@@ -41,6 +45,10 @@ public class Aluno {
        setEmail (email) ;
        setMatricula (matricula) ;
        setIdStatus (idstatus) ;      
+    }
+
+    public Aluno() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Integer getId() {
