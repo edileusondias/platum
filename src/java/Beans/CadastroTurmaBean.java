@@ -16,6 +16,10 @@ import org.primefaces.context.RequestContext;
 @ViewScoped
 public class CadastroTurmaBean implements Serializable {
 
+    private Integer iddisciplina;
+    private Integer iddocente;
+    private Integer idsemestre;
+    private Integer idturno;
     /**
      * @return the iddisciplina
      */
@@ -72,11 +76,7 @@ public class CadastroTurmaBean implements Serializable {
         this.idturno = idturno;
     }
 
-    private Integer iddisciplina;
-    private Integer iddocente;
-    private Integer idsemestre;
-    private Integer idturno;
-        
+           
 
     public CadastroTurmaBean() {
 
