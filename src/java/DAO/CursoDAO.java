@@ -39,4 +39,31 @@ public class CursoDAO {
         }
         return cursos;
     }
+           public static boolean salvar(CursoDAO curso) throws Exception {
+        Connection conexao = Conexao.getConnection();
+        PreparedStatement ps;
+        try {
+            ps = conexao.prepareStatement("insert into `platum`.`curso` idcurso=?, descricaocurso=?");//FIXME
+            ps.setString (1, curso.getIdcurso());
+            ps.setString (2, curso.getDescricaocurso());
+           
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            throw new Exception("Erro na execução do SQL - busca de usuário", ex);
+        }
+        return false;
+    }
+
+    private String getIdcurso() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getDescricaocurso() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
+
+
