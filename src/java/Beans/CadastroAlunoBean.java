@@ -18,27 +18,79 @@ import org.primefaces.context.RequestContext;
 public class CadastroAlunoBean implements Serializable {
 
     /**
+     * @return the idsexo
+     */
+    public Integer getIdsexo() {
+        return idsexo;
+    }
+
+    /**
+     * @param idsexo the idsexo to set
+     */
+    public void setIdsexo(Integer idsexo) {
+        this.idsexo = idsexo;
+    }
+
+    /**
+     * @return the idDisciplina
+     */
+    public Integer getIdDisciplina() {
+        return idDisciplina;
+    }
+
+    /**
+     * @param idDisciplina the idDisciplina to set
+     */
+    public void setIdDisciplina(Integer idDisciplina) {
+        this.idDisciplina = idDisciplina;
+    }
+
+    /**
+     * @return the idCurso
+     */
+    public Integer getIdCurso() {
+        return idCurso;
+    }
+
+    /**
+     * @param idCurso the idCurso to set
+     */
+    public void setIdCurso(Integer idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    /**
+     * @return the idTurma
+     */
+    public Integer getIdTurma() {
+        return idTurma;
+    }
+
+    /**
+     * @param idTurma the idTurma to set
+     */
+    public void setIdTurma(Integer idTurma) {
+        this.idTurma = idTurma;
+    }
+
+    /**
      * @return the id
      */
        
     private Integer id;
     private String cpf;
-    private String rg;
-    private Date dataemissao;
-    private String orgaoemissor;
     private String nomecompleto;
     private Date datadenascimento;
     private String nomeMae;
     private String nomePai;
     private String telefone;
-    private String cep;
-    private String logradouro;
-    private String numero;
-    private String bairro;
-    private Integer idSexo;
-    private String email;
+    private Integer idsexo;
     private String matricula;
     private Integer idStatus;
+    private Integer idDisciplina;
+    private Integer idCurso;
+    private Integer idTurma;
+    
     
     /**
      *
@@ -94,48 +146,6 @@ public class CadastroAlunoBean implements Serializable {
      */
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    /**
-     * @return the rg
-     */
-    public String getRg() {
-        return rg;
-    }
-
-    /**
-     * @param rg the rg to set
-     */
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
-    /**
-     * @return the dataemissao
-     */
-    public Date getDataemissao() {
-        return dataemissao;
-    }
-
-    /**
-     * @param dataemissao the dataemissao to set
-     */
-    public void setDataemissao(Date dataemissao) {
-        this.dataemissao = dataemissao;
-    }
-
-    /**
-     * @return the orgaoemissor
-     */
-    public String getOrgaoemissor() {
-        return orgaoemissor;
-    }
-
-    /**
-     * @param orgaoemissor the orgaoemissor to set
-     */
-    public void setOrgaoemissor(String orgaoemissor) {
-        this.orgaoemissor = orgaoemissor;
     }
 
     /**
@@ -208,91 +218,7 @@ public class CadastroAlunoBean implements Serializable {
         this.telefone = telefone;
     }
 
-    /**
-     * @return the cep
-     */
-    public String getCep() {
-        return cep;
-    }
-
-    /**
-     * @param cep the cep to set
-     */
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    /**
-     * @return the logradouro
-     */
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-    /**
-     * @param logradouro the logradouro to set
-     */
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    /**
-     * @return the numero
-     */
-    public String getNumero() {
-        return numero;
-    }
-
-    /**
-     * @param numero the numero to set
-     */
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    /**
-     * @return the bairro
-     */
-    public String getBairro() {
-        return bairro;
-    }
-
-    /**
-     * @param bairro the bairro to set
-     */
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    /**
-     * @return the idSexo
-     */
-    public Integer getIdSexo() {
-        return idSexo;
-    }
-
-    /**
-     * @param idSexo the idSexo to set
-     */
-    public void setIdSexo(Integer idSexo) {
-        this.idSexo = idSexo;
-    }
-
-    /**
-     * @return the email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
+     /**
      * @return the matricula
      */
     public String getMatricula() {
