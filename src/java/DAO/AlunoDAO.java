@@ -18,7 +18,7 @@ public class AlunoDAO {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try {
-            ps = conexao.prepareStatement("insert into `platum`.`aluno` cpf=?, nome=?, datanasc=?, nomemae=?, nomepai=?, Idsexo=?, telefone=?, status=?");
+            ps = conexao.prepareStatement("insert into `platum`.`aluno` cpf=?, nome=?, datanasc=?, nomemae=?, nomepai=?, sexo=?, telefone=?, status=?");
 
             ps.setString (2, aluno.getNomecompleto());
             ps.setString (1, aluno.getCpf());

@@ -45,7 +45,7 @@ public class CadastroAlunoBean implements Serializable {
 
     public String salvar(){
          try {
-            Aluno.Salvar(new Aluno());
+            Aluno.Salvar(new Aluno(cpf, nomecompleto, datadenascimento, nomeMae, nomePai, telefone, idSexo, email, matricula, idStatus));
             addMessage("Dados inseridos com sucesso!");
             return "home";
         } catch (Exception ex) {

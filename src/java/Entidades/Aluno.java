@@ -20,26 +20,23 @@ public class Aluno {
     private Integer idCurso;
     private Integer idTurma;
     
-    public Aluno (String cpf,  String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, Integer idsexo, String email, String matricula, Integer idstatus) throws Exception {
+    public Aluno (String cpf,  String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, Integer idSexo, String email, String matricula, Integer idstatus) throws Exception {
        setCpf (cpf) ;
        setNomecompleto (nomecompleto) ;
        setDatadenascimento(datanascimento) ;
        setNomeMae (nomemae) ;
        setNomePai (nomepai) ;
        setTelefone (telefone) ;
-       setIdSexo (idsexo) ;
+       setIdSexo (idSexo) ;
        setMatricula (matricula) ;
        setIdStatus (idstatus) ;      
     }
     
     public static boolean Salvar(Aluno aluno) throws Exception {
+        
         return AlunoDAO.salvar(aluno);
     }
 
-    public Aluno() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
     public Integer getId() {
         return id;
     }

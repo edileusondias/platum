@@ -11,23 +11,20 @@
 
         <div>
             <h:form >
-                <p:dataTable id="tabela" 
-                            var="item"
-                            value="#{CadastroAlunoBean.aluno}"
-                            editable="true">
-                <p:panel header="Cadastrar Aluno" style="margin: 10 auto;">                    
+                <p:growl id="msg"/>
+                <p:panel header="Cadastrar Aluno" style="margin:  auto;">                    
 
                     <h:panelGrid columns="4" cellpadding="2" >
 
                         <p:outputLabel value="Nome completo" />
-                        <p:inputText value="#{CadastroAlunoBean.aluno}"/>
+                        <p:inputText />
 
                         <p:outputLabel value="Data Nasc." />
                         <p:inputMask mask="99/99/9999" value="#{CadastroAlunoBean.datadenascimento}"/>
 
 
                         <p:outputLabel value="Sexo" />
-                        <p:selectOneRadio   value="#{item}">
+                        <p:selectOneRadio   value="#{CadastroAlunoBean.idSexo}">
                             <f:selectItem itemLabel="Masculino" itemValue="M" />
                             <f:selectItem itemLabel="Feminino" itemValue="F" />
                             <f:selectItem itemLabel="Indefinido" itemValue="I" />
@@ -52,14 +49,8 @@
                         <p:outputLabel  value="CEP" />
                         <p:inputMask  mask="99.999-999" value="#{CadastroAlunoBean.cep}"/>
 
-                        <p:outputLabel value="Logradouro" />
-                        <p:inputText value="#{CadastroAlunoBean.logradouro}"/>
-
                         <p:outputLabel  value="Número" />
                         <p:inputMask  mask="99999" value="#{CadastroAlunoBean.numero}"/>
-
-                        <p:outputLabel value="Bairro" />
-                        <p:inputText value="#{CadastroAlunoBean.bairro}"/>
 
                         <p:outputLabel value="E-mail" />
                         <p:inputText value="#{CadastroAlunoBean.email}"/>
@@ -94,9 +85,9 @@
                     </h:panelGrid>
                 </p:panel>
                 <p:button  value="Limpar"/>
-                <p:commandButton value="Cadastrar" action="#{CadastroAlunoBean.salvar()}"/>
+                <p:commandButton value="Cadastrar" ajax="false" action="#{CadastroAlunoBean.salvar()}" process="@form" immediate="true"/>
                 <p:button  value="Voltar"/>
-              </p:dataTable>  
+               
             </h:form>
         </div>
 
