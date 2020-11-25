@@ -10,7 +10,7 @@
     <ui:define name="content">
 
         <div>
-            <h:form >
+            <h:form id="formAluno" >
                 <p:growl id="msg"/>
                 <p:panel header="Cadastrar Aluno" style="margin:  auto;">                    
 
@@ -76,7 +76,7 @@
                         </h:selectOneMenu>
 
                         <h:outputLabel value="Turma" />
-                        <h:selectOneMenu   value="" style="width:230px">
+                        <h:selectOneMenu    style="width:230px">
                             <f:selectItem itemLabel="Selecione" itemValue="" />
                             <f:selectItem itemLabel="A" itemValue="Xbox One" />
                             <f:selectItem itemLabel="B" itemValue="PS4" />
@@ -85,7 +85,7 @@
                     </h:panelGrid>
                 </p:panel>
                 <p:button  value="Limpar"/>
-                <p:commandButton value="Cadastrar" ajax="false" action="#{CadastroAlunoBean.salvar()}" process="@form" immediate="true"/>
+                <p:commandButton value="Cadastrar" ajax="false" action="#{CadastroAlunoBean.salvar()}" process="@this" immediate="true"/>
                 <p:button  value="Voltar"/>
                
             </h:form>
