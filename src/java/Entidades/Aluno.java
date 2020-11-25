@@ -1,9 +1,11 @@
 package Entidades;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Aluno {
-
+    
+    Aluno aluno;
     /**
      * @param id the id to set
      */
@@ -89,8 +91,42 @@ public class Aluno {
     }
 
     public Aluno() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 79 * hash + Objects.hashCode(this.aluno);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Aluno other = (Aluno) obj;
+        if (!Objects.equals(this.aluno, other.aluno)) {
+            return false;
+        }
+        return true;
+    }
+    
 
     public Integer getId() {
         return id;
