@@ -5,6 +5,13 @@ import java.util.Date;
 public class Turma {
 
     /**
+     * @return the nometurma
+     */
+    public String getNometurma() {
+        return nometurma;
+    }
+
+    /**
      * @return the iddisciplina
      */
     public Integer getIddisciplina() {
@@ -58,7 +65,7 @@ public class Turma {
     private Integer iddisciplina;
     private Integer iddocente;
     private Integer idsemestre;
-    private String idnometurma;     
+    private String nometurma;     
             
             
     public Turma (Integer iddisciplina, Integer idsemestre, Integer iddocente, String nometurma) throws Exception {
