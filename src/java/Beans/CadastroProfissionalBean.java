@@ -37,12 +37,12 @@ public class CadastroProfissionalBean implements Serializable {
     }
 
     public void salvar() {
-        Profissional profissional = new Profissional();
-        
-        try {
-            Profissional.Salvar(profissional);
-        } catch (Exception e) {
-        }
+//        Profissional profissional = new Profissional();
+//        
+//        try {
+//            Profissional.Salvar(profissional);
+//        } catch (Exception e) {
+//        }
 
     }
 
