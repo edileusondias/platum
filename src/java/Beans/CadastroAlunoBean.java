@@ -14,7 +14,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import org.primefaces.context.RequestContext;
 
-@Named (value = "CadastroAlunoBean")
+@Named (value = "cadastroAlunoBean")
 @ViewScoped
 public class CadastroAlunoBean implements Serializable {
 

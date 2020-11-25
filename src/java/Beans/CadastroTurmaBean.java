@@ -87,11 +87,11 @@ public class CadastroTurmaBean implements Serializable {
     }
 
     public void salvar() {
-        Turma turma = new Turma();
-        try {
-            Turma.Salvar(turma);
-        } catch (Exception e) {
-        }
+//        Turma turma = new Turma();
+//        try {
+//            Turma.Salvar(turma);
+//        } catch (Exception e) {
+//        }
 
     }
 

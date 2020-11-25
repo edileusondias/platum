@@ -4,64 +4,9 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Aluno {
-    
-    Aluno aluno;
-    /**
-     * @param id the id to set
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    /**
-     * @return the idDisciplina
-     */
-    public Integer getIdDisciplina() {
-        return idDisciplina;
-    }
-
-    /**
-     * @param idDisciplina the idDisciplina to set
-     */
-    public void setIdDisciplina(Integer idDisciplina) {
-        this.idDisciplina = idDisciplina;
-    }
-
-    /**
-     * @return the idCurso
-     */
-    public Integer getIdCurso() {
-        return idCurso;
-    }
-
-    /**
-     * @param idCurso the idCurso to set
-     */
-    public void setIdCurso(Integer idCurso) {
-        this.idCurso = idCurso;
-    }
-
-    /**
-     * @return the idTurma
-     */
-    public Integer getIdTurma() {
-        return idTurma;
-    }
-
-    /**
-     * @param idTurma the idTurma to set
-     */
-    public void setIdTurma(Integer idTurma) {
-        this.idTurma = idTurma;
-    }
-
-    public static void Salvar(Aluno aluno) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
   /* Atributos */
     private Integer id;
     private String cpf;
-    private String rg;
     private String nomecompleto;
     private Date datadenascimento;
     private String nomeMae;
@@ -74,9 +19,8 @@ public class Aluno {
     private Integer idCurso;
     private Integer idTurma;
     
-    public Aluno (String cpf, String rg, String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, Integer idsexo, String matricula, Integer idstatus, Integer iddisciplina, Integer idcurso, Integer idturma ) throws Exception {
+    public Aluno (String cpf,  String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, Integer idsexo, String email, String matricula, Integer idstatus) throws Exception {
        setCpf (cpf) ;
-       setRg (rg) ;
        setNomecompleto (nomecompleto) ;
        setDatadenascimento(datanascimento) ;
        setNomeMae (nomemae) ;
@@ -84,10 +28,12 @@ public class Aluno {
        setTelefone (telefone) ;
        setIdSexo (idsexo) ;
        setMatricula (matricula) ;
-       setIdStatus (idstatus) ;   
-       setIdDisciplina (iddisciplina) ;
-       setIdCurso (idcurso) ;
-       setIdTurma (idturma) ;
+       setIdStatus (idstatus) ;      
+    }
+    
+    public static void Salvar(Aluno aluno) {
+        //Chamar AlunoDAO.salvar()
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Aluno() {
@@ -140,14 +86,6 @@ public class Aluno {
         this.cpf = cpf;
     }
 
-    public String getRg() {
-        return rg;
-    }
-
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
     public String getNomecompleto() {
         return nomecompleto;
     }
@@ -187,7 +125,7 @@ public class Aluno {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
+    
     public Integer getIdSexo() {
         return idSexo;
     }

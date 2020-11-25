@@ -5,11 +5,6 @@ import DAO.ProfissionalDAO;
 import java.util.Date;
 
 public class Profissional {
-
-    public static void Salvar(Profissional profissional) throws Exception {
-        ProfissionalDAO.salvar(profissional);
-    }
-
     /* Atributos */
     private Integer id;
     private String nome;
@@ -21,8 +16,7 @@ public class Profissional {
     private String sexo;
     private String telefone;
     
-
-    public Profissional (Integer id, String nome, String matricula, String CPF, String RG, Date datanascimento, String nomemae, String sexo, String telefone){        
+    public Profissional (Integer id, String nome, String matricula, String CPF, String RG, Date datanascimento, String nomemae, String sexo,String telefone, String CEP, String logradouro, String numero, String bairro){        
         this.nome = nome;
         this.matricula = matricula;
         this.CPF = CPF;
@@ -33,9 +27,9 @@ public class Profissional {
         this.telefone = telefone;
        
     }
-
-    public Profissional() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public static void Salvar(Profissional profissional) throws Exception {
+        ProfissionalDAO.salvar(profissional);
     }
 
     public Integer getId() {
@@ -70,10 +64,6 @@ public class Profissional {
         return RG;
     }
 
-    public void setRG(Integer RG) {
-        this.setRG(RG);
-    }
-
     public Date getDatanascimento() {
         return datanascimento;
     }
@@ -102,9 +92,6 @@ public class Profissional {
         return telefone;
     }
 
-    public void setTelefone(Integer telefone) {
-        this.setTelefone(telefone);
-    }
 
     public void setId(Integer id) {
         this.id = id;
@@ -117,11 +104,6 @@ public class Profissional {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
-    public String getDatanasc() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-   }
+}
 
     

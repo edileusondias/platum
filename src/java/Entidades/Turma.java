@@ -3,86 +3,49 @@ package Entidades;
 import java.util.Date;
 
 public class Turma {
-
-    /**
-     * @return the nometurma
-     */
-    public String getNometurma() {
-        return nometurma;
-    }
-
-    /**
-     * @return the iddisciplina
-     */
-    public Integer getIddisciplina() {
-        return iddisciplina;
-    }
-
-    /**
-     * @param iddisciplina the iddisciplina to set
-     */
-    public void setIddisciplina(Integer iddisciplina) {
-        this.iddisciplina = iddisciplina;
-    }
-
-    /**
-     * @return the iddocente
-     */
-    public Integer getIddocente() {
-        return iddocente;
-    }
-
-    /**
-     * @param iddocente the iddocente to set
-     */
-    public void setIddocente(Integer iddocente) {
-        this.iddocente = iddocente;
-    }
-
-    /**
-     * @return the idsemestre
-     */
-    public Integer getIdsemestre() {
-        return idsemestre;
-    }
-
-    /**
-     * @param idsemestre the idsemestre to set
-     */
-    public void setIdsemestre(Integer idsemestre) {
-        this.idsemestre = idsemestre;
-    }
-
-  
-    public Turma() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static void Salvar(Turma turma) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-  /* Atributos */
-    private Integer iddisciplina;
-    private Integer iddocente;
-    private Integer idsemestre;
-    private String nometurma;     
+    /* Atributos */
+    private Integer disciplinaId;
+    private Integer semestreId;
+    private Integer turmaId;
+    private Integer docenteId;
             
-            
-    public Turma (Integer iddisciplina, Integer idsemestre, Integer iddocente, String nometurma) throws Exception {
-      setIddisciplina (iddisciplina) ;
-      setIdsemestre (idsemestre) ;
-      setIddocente (iddocente) ;
-      setNometurma (nometurma) ;
- 
+    public Turma (Integer disciplina, Integer semestre, Integer codturma, Integer docente) throws Exception {
+      setDisciplinaId(disciplina) ;
+      setSemestreId(semestre) ;
+      setTurmaId(codturma) ;
+      setDocenteId(docente) ;
+      
     } 
 
-    public String getNomeTurma() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Integer getDisciplinaId() {
+        return disciplinaId;
     }
 
-    private void setNometurma(String nometurma) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setDisciplinaId(Integer disciplinaId) {
+        this.disciplinaId = disciplinaId;
     }
-    
-    
+
+    public Integer getSemestreId() {
+        return semestreId;
+    }
+
+    public void setSemestreId(Integer semestreId) {
+        this.semestreId = semestreId;
+    }
+
+    public Integer getTurmaId() {
+        return turmaId;
+    }
+
+    public void setTurmaId(Integer turmaId) {
+        this.turmaId = turmaId;
+    }
+
+    public Integer getDocenteId() {
+        return docenteId;
+    }
+
+    public void setDocenteId(Integer docenteId) {
+        this.docenteId = docenteId;
+    }
 }
