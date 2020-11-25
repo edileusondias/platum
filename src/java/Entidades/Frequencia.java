@@ -8,6 +8,10 @@ import java.util.Date;
  * @author Cristiane Castilho
  */
 public class Frequencia {
+
+    public static void Salvar(Frequencia frequencia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   /* Atributos */
     private Integer codturma;
     private Integer docente;
