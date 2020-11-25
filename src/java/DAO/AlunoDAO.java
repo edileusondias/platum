@@ -58,7 +58,11 @@ public class AlunoDAO {
             ps.setString (5, aluno.getNomepai());
             ps.setString (6, aluno.getSexo());
             ps.setString (7, aluno.getTelefone());
-            ps.setString (8, aluno.getStatus());
+            ps.setInt (8, aluno.getIdStatus());
+            ps.setString (9, aluno.getNomeMae());
+            ps.setInt (10, aluno.getIdDisciplina());
+            ps.setInt (11, aluno.getIdCurso());
+            ps.setInt (12, aluno.getIdTurma());
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
                 return true;
