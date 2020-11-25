@@ -4,6 +4,7 @@ import Entidades.Profissional;
 import Entidades.Usuario;
 import Utils.Conexao;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ public class ProfissionalDAO {
             ps.setString(2, prof.getMatricula());
             ps.setString(3, prof.getCPF());
             ps.setString(4, prof.getRG());
-//            ps.setDate(5, prof.getDatanascimento()); //FIXMe
+            ps.setDate(5, (Date) prof.getDatanascimento());
             ps.setString(6, prof.getNomemae());
             ps.setString(7, prof.getSexo());
             ps.setString(8, prof.getTelefone());

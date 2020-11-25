@@ -36,12 +36,15 @@ public class CadastroProfissionalBean implements Serializable {
     }
 
     public String salvar() {
-//        Profissional profissional = new Profissional();
 //        
-//        try {
-//            Profissional.Salvar(profissional);
-//        } catch (Exception e) {
-//        }
+        try {
+            Profissional.Salvar(new Profissional(id, nome, matricula, CPF, RG, datanascimento, nomemae, sexo, nome, CPF, matricula, nome, RG));
+            addMessage("Dados inseridos com sucesso!");
+            return "home";
+        } catch (Exception ex) {
+                      addMessage("Dados não inseridos");
+            Logger.getLogger(CadastroProfissionalBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return null;
     }
 
