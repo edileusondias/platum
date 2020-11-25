@@ -18,14 +18,13 @@ public class LoginBean implements Serializable {
     private String senha;
     
     public LoginBean(){
-        
     }
+    
     @PostConstruct
     public void init(){
         
     }
     
-       
     public String acessar() {
         try {
             //tratar o que o usuario digitou

@@ -14,10 +14,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Regina
- */
 public class DisciplinaDAO {
     
         public static List<Disciplina> listar() throws Exception
@@ -30,8 +26,6 @@ public class DisciplinaDAO {
 
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
-                int codigo = 0;
-                int cargahoraria = 0;
                 Disciplina d = new Disciplina (resultSet.getInt("id"), resultSet.getString ("codigo"), resultSet.getString("nome"),resultSet.getInt ("cargahoraria"));
                 disciplina.add(d);
             }
@@ -40,14 +34,13 @@ public class DisciplinaDAO {
         }
         return disciplina;
     }
-    public static boolean salvar(DisciplinaDAO disciplina) throws Exception {
+    public static boolean salvar(Disciplina disciplina) throws Exception {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try {
-            ps = conexao.prepareStatement("insert into `platum`.`disciplina` iddisciplina=?, nomedisciplina=?, coddisciplina");//FIXME
-            ps.setString (1, disciplina.getIddisciplina());
-            ps.setString (2, disciplina.getNomedisciplina());
-            ps.setString (2, disciplina.getCoddisciplina());
+            ps = conexao.prepareStatement("insert into `platum`.`disciplina` iddisciplina=?, nomedisciplina=?");//FIXME
+            ps.setString (1, disciplina.getCodigo());
+            ps.setString (2, disciplina.getNome());
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
                 return true;
@@ -57,16 +50,4 @@ public class DisciplinaDAO {
         }
         return false;
     }    
-
-    private String getIddisciplina() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private String getNomedisciplina() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private String getCoddisciplina() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

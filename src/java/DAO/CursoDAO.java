@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DAO;
 
 import Entidades.Curso;
@@ -15,10 +10,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Regina
- */
 public class CursoDAO {
     
         public static List<Curso> listar() throws Exception
@@ -39,13 +30,13 @@ public class CursoDAO {
         }
         return cursos;
     }
-           public static boolean salvar(CursoDAO curso) throws Exception {
+           public static boolean salvar(Curso curso) throws Exception {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try {
             ps = conexao.prepareStatement("insert into `platum`.`curso` idcurso=?, descricaocurso=?");//FIXME
-            ps.setString (1, curso.getIdcurso());
-            ps.setString (2, curso.getDescricaocurso());
+            ps.setInt (1, curso.getId());
+            ps.setString (2, curso.getNome());
            
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
@@ -55,14 +46,6 @@ public class CursoDAO {
             throw new Exception("Erro na execução do SQL - busca de usuário", ex);
         }
         return false;
-    }
-
-    private String getIdcurso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private String getDescricaocurso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 

@@ -19,7 +19,7 @@ public class ProfissionalDAO {
             ps.setString(2, prof.getMatricula());
             ps.setString(3, prof.getCPF());
             ps.setString(4, prof.getRG());
-            ps.setString(5, prof.getDatanasc());
+//            ps.setDate(5, prof.getDatanascimento()); //FIXMe
             ps.setString(6, prof.getNomemae());
             ps.setString(7, prof.getSexo());
             ps.setString(8, prof.getTelefone());

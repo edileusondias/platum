@@ -16,83 +16,27 @@ import org.primefaces.context.RequestContext;
 @ViewScoped
 public class CadastroTurmaBean implements Serializable {
 
-    /**
-     * @return the nometurma
-     */
-    public String getNometurma() {
-        return nometurma;
-    }
-
-    /**
-     * @param nometurma the nometurma to set
-     */
-    public void setNometurma(String nometurma) {
-        this.nometurma = nometurma;
-    }
-
     private Integer iddisciplina;
     private Integer iddocente;
     private Integer idsemestre;
     private String nometurma;
-    /**
-     * @return the iddisciplina
-     */
-    public Integer getIddisciplina() {
-        return iddisciplina;
-    }
-
-    /**
-     * @param iddisciplina the iddisciplina to set
-     */
-    public void setIddisciplina(Integer iddisciplina) {
-        this.iddisciplina = iddisciplina;
-    }
-
-    /**
-     * @return the iddocente
-     */
-    public Integer getIddocente() {
-        return iddocente;
-    }
-
-    /**
-     * @param iddocente the iddocente to set
-     */
-    public void setIddocente(Integer iddocente) {
-        this.iddocente = iddocente;
-    }
-
-    /**
-     * @return the idsemestre
-     */
-    public Integer getIdsemestre() {
-        return idsemestre;
-    }
-
-    /**
-     * @param idsemestre the idsemestre to set
-     */
-    public void setIdsemestre(Integer idsemestre) {
-        this.idsemestre = idsemestre;
-    }
-     
 
     public CadastroTurmaBean() {
 
-}
+    }
 
- @PostConstruct
+    @PostConstruct
     public void init() {
 
     }
 
-    public void salvar() {
+    public String salvar() {
 //        Turma turma = new Turma();
 //        try {
 //            Turma.Salvar(turma);
 //        } catch (Exception e) {
 //        }
-
+        return null;
     }
 
     public void addMessage(String msg) {
@@ -103,6 +47,38 @@ public class CadastroTurmaBean implements Serializable {
 
     public void atualizarComponente(String id) {
         RequestContext.getCurrentInstance().update(id);
+    }
+
+    public Integer getIddisciplina() {
+        return iddisciplina;
+    }
+
+    public void setIddisciplina(Integer iddisciplina) {
+        this.iddisciplina = iddisciplina;
+    }
+
+    public Integer getIddocente() {
+        return iddocente;
+    }
+
+    public void setIddocente(Integer iddocente) {
+        this.iddocente = iddocente;
+    }
+
+    public Integer getIdsemestre() {
+        return idsemestre;
+    }
+
+    public void setIdsemestre(Integer idsemestre) {
+        this.idsemestre = idsemestre;
+    }
+
+    public String getNometurma() {
+        return nometurma;
+    }
+
+    public void setNometurma(String nometurma) {
+        this.nometurma = nometurma;
     }
        
 }

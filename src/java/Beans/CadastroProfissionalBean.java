@@ -26,7 +26,6 @@ public class CadastroProfissionalBean implements Serializable {
     private String sexo;
     private Integer telefone;
    
-
     public CadastroProfissionalBean() {
 
     }
@@ -36,14 +35,14 @@ public class CadastroProfissionalBean implements Serializable {
 
     }
 
-    public void salvar() {
+    public String salvar() {
 //        Profissional profissional = new Profissional();
 //        
 //        try {
 //            Profissional.Salvar(profissional);
 //        } catch (Exception e) {
 //        }
-
+        return null;
     }
 
     public void addMessage(String msg) {
@@ -124,4 +123,4 @@ public class CadastroProfissionalBean implements Serializable {
         this.telefone = telefone;
     }
 
-   }
+}

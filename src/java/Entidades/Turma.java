@@ -8,13 +8,14 @@ public class Turma {
     private Integer semestreId;
     private Integer turmaId;
     private Integer docenteId;
+    private String nomeTurma;
             
-    public Turma (Integer disciplina, Integer semestre, Integer codturma, Integer docente) throws Exception {
-      setDisciplinaId(disciplina) ;
-      setSemestreId(semestre) ;
-      setTurmaId(codturma) ;
-      setDocenteId(docente) ;
-      
+    public Turma (Integer disciplina, Integer semestre, Integer codturma, Integer docente, String nomeTurma) throws Exception {
+        setDisciplinaId(disciplina) ;
+        setSemestreId(semestre) ;
+        setTurmaId(codturma) ;
+        setDocenteId(docente) ;
+        setNomeTurma(nomeTurma);
     } 
 
     public Integer getDisciplinaId() {
@@ -47,5 +48,13 @@ public class Turma {
 
     public void setDocenteId(Integer docenteId) {
         this.docenteId = docenteId;
+    }
+
+    public String getNomeTurma() {
+        return nomeTurma;
+    }
+
+    public void setNomeTurma(String nomeTurma) {
+        this.nomeTurma = nomeTurma;
     }
 }

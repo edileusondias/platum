@@ -32,12 +32,12 @@ public class RegistrarFrequenciaBean implements Serializable {
     }
 
     public void salvar() {
-        Frequencia frequencia = new Frequencia();
-        
-        try {
-            Frequencia.Salvar(frequencia);
-        } catch (Exception e) {
-        }
+//        Frequencia frequencia = new Frequencia();
+//        
+//        try {
+//            Frequencia.Salvar(frequencia);
+//        } catch (Exception e) {
+//        }
 
     }
 
@@ -86,4 +86,4 @@ public class RegistrarFrequenciaBean implements Serializable {
         this.status = status;
     }
 
-   }
+}
