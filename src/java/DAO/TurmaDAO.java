@@ -13,11 +13,11 @@ public class TurmaDAO {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try{
-            ps = conexao.prepareStatement("insert into `platum`.`turma` iddisciplina=?, iddocente=?, idsemestre=?, idturno=?"); // obtem apena uma única informação
+            ps = conexao.prepareStatement("insert into `platum`.`turma` iddisciplina=?, iddocente=?, idsemestre=?, nometurma=?"); // obtem apena uma única informação
             ps.setInt(1, tur.getIddisciplina());
             ps.setInt(2, tur.getIddocente());
             ps.setInt(3, tur.getIdsemestre());
-            ps.setInt(4, tur.getIdturno());
+            ps.setString(4, tur.getNomeTurma());
             ResultSet resultSet = ps.executeQuery();
              while (resultSet.next()) {
                 return true;
