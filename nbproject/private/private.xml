@@ -3,14 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/src/java/Beans/LoginBean.java</file>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/src/java/Utils/Conexao.java</file>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/src/java/Beans/CadastroProfissionalBean.java</file>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/src/java/Entidades/Usuario.java</file>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/src/java/DAO/UsuarioDAO.java</file>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/web/login.xhtml</file>
-            <file>file:/C:/Users/Regina/Documents/NetBeansProjects/git/platum/web/cadastroAluno.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Entidades/Turma.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/home.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/DAO/TurmaDAO.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/registrarFrequencia.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/cadastroAluno.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Utils/Conexao.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Beans/CadastroTurmaBean.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/cadastrarTurma.xhtml</file>
         </group>
     </open-files>
 </project-private>

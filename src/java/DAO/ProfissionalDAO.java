@@ -14,7 +14,7 @@ public class ProfissionalDAO {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try{
-            ps = conexao.prepareStatement("insert into `platum`.`profissional` nome=? matricula=? cpf=? rg=? datanasc=? nomemae=? sexo=? telefone=?"); // obtem apena uma única informação
+            ps = conexao.prepareStatement("insert into `platum`.`profissional` nome=?, matricula=?, cpf=?, rg=?, datanasc=?, nomemae=?, sexo=?, telefone=?"); // obtem apena uma única informação
             ps.setString(1, prof.getNome());
             ps.setString(2, prof.getMatricula());
             ps.setString(3, prof.getCPF());

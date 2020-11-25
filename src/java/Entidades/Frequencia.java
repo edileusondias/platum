@@ -2,121 +2,59 @@ package Entidades;
 
 import java.util.Date;
 
-
-/**
- *
- * @author Cristiane Castilho
- */
 public class Frequencia {
-
-    public static void Salvar(Frequencia frequencia) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-  /* Atributos */
-    private Integer codturma;
-    private Integer docente;
-    private Integer disciplina;
+    /* Atributos */
+    private Integer id;
+    private String status;
     private Date data;
-            
-            
-    public Turma (Integer disciplina, Integer semestre, Integer codturma, Integer docente, Date periodo, String buscar) throws Exception {
-      setDisciplina (disciplina) ;
-      setSemestre (semestre) ;
-      setCodturma (codturma) ;
-      setDocente (docente) ;
-      setPeriodo (periodo) ;
-      setBuscar (buscar) ;
-      
-    
-    } 
+    private Integer idTurma;
+    private Integer idAluno;
 
-    private void set(Integer disciplina) {
+    public Frequencia(Integer id, String status, Date data, Integer idTurma, Integer idAluno) throws Exception {
+        setStatus(status);
+        setData(data);
+        setIdTurma(idTurma);
+        setIdAluno(idAluno);
+    }
+    
+    public static void Salvar(Frequencia frequencia) {
+        //chamar o metodo FrequenciaDAO.salvar
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    /**
-     * @return the disciplina
-     */
-    public Integer getDisciplina() {
-        return disciplina;
+    public Integer getId() {
+        return id;
     }
 
-    /**
-     * @param disciplina the disciplina to set
-     */
-    public void setDisciplina(Integer disciplina) {
-        this.disciplina = disciplina;
+    public String getStatus() {
+        return status;
     }
 
-    /**
-     * @return the semestre
-     */
-    public Integer getSemestre() {
-        return semestre;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    /**
-     * @param semestre the semestre to set
-     */
-    public void setSemestre(Integer semestre) {
-        this.semestre = semestre;
+    public Date getData() {
+        return data;
     }
 
-    /**
-     * @return the codturma
-     */
-    public Integer getCodturma() {
-        return codturma;
+    public void setData(Date data) {
+        this.data = data;
     }
 
-    /**
-     * @param codturma the codturma to set
-     */
-    public void setCodturma(Integer codturma) {
-        this.codturma = codturma;
+    public Integer getIdTurma() {
+        return idTurma;
     }
 
-    /**
-     * @return the docente
-     */
-    public Integer getDocente() {
-        return docente;
+    public void setIdTurma(Integer idTurma) {
+        this.idTurma = idTurma;
     }
 
-    /**
-     * @param docente the docente to set
-     */
-    public void setDocente(Integer docente) {
-        this.docente = docente;
+    public Integer getIdAluno() {
+        return idAluno;
     }
 
-    /**
-     * @return the periodo
-     */
-    public Date getPeriodo() {
-        return periodo;
+    public void setIdAluno(Integer idAluno) {
+        this.idAluno = idAluno;
     }
-
-    /**
-     * @param periodo the periodo to set
-     */
-    public void setPeriodo(Date periodo) {
-        this.periodo = periodo;
-    }
-
-    /**
-     * @return the buscar
-     */
-    public String getBuscar() {
-        return buscar;
-    }
-
-    /**
-     * @param buscar the buscar to set
-     */
-    public void setBuscar(String buscar) {
-        this.buscar = buscar;
-    }
-    
-    
 }

@@ -17,6 +17,24 @@ import org.primefaces.context.RequestContext;
 public class CadastroTurmaBean implements Serializable {
 
     /**
+     * @return the nometurma
+     */
+    public String getNometurma() {
+        return nometurma;
+    }
+
+    /**
+     * @param nometurma the nometurma to set
+     */
+    public void setNometurma(String nometurma) {
+        this.nometurma = nometurma;
+    }
+
+    private Integer iddisciplina;
+    private Integer iddocente;
+    private Integer idsemestre;
+    private String nometurma;
+    /**
      * @return the iddisciplina
      */
     public Integer getIddisciplina() {
@@ -57,26 +75,7 @@ public class CadastroTurmaBean implements Serializable {
     public void setIdsemestre(Integer idsemestre) {
         this.idsemestre = idsemestre;
     }
-
-    /**
-     * @return the idturno
-     */
-    public Integer getIdturno() {
-        return idturno;
-    }
-
-    /**
-     * @param idturno the idturno to set
-     */
-    public void setIdturno(Integer idturno) {
-        this.idturno = idturno;
-    }
-
-    private Integer iddisciplina;
-    private Integer iddocente;
-    private Integer idsemestre;
-    private Integer idturno;
-        
+     
 
     public CadastroTurmaBean() {
 
@@ -88,11 +87,11 @@ public class CadastroTurmaBean implements Serializable {
     }
 
     public void salvar() {
-        Turma turma = new Turma();
-        try {
-            Turma.Salvar(turma);
-        } catch (Exception e) {
-        }
+//        Turma turma = new Turma();
+//        try {
+//            Turma.Salvar(turma);
+//        } catch (Exception e) {
+//        }
 
     }
 

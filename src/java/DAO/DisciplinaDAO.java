@@ -40,4 +40,33 @@ public class DisciplinaDAO {
         }
         return disciplina;
     }
+    public static boolean salvar(DisciplinaDAO disciplina) throws Exception {
+        Connection conexao = Conexao.getConnection();
+        PreparedStatement ps;
+        try {
+            ps = conexao.prepareStatement("insert into `platum`.`disciplina` iddisciplina=?, nomedisciplina=?, coddisciplina");//FIXME
+            ps.setString (1, disciplina.getIddisciplina());
+            ps.setString (2, disciplina.getNomedisciplina());
+            ps.setString (2, disciplina.getCoddisciplina());
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            throw new Exception("Erro na execução do SQL - busca de usuário", ex);
+        }
+        return false;
+    }    
+
+    private String getIddisciplina() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getNomedisciplina() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private String getCoddisciplina() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
