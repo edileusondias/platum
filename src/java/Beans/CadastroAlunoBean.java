@@ -1,5 +1,6 @@
 package Beans;
 
+import DAO.AlunoDAO;
 import Entidades.Aluno;
 import Entidades.Profissional;
 import java.io.Serializable;
@@ -104,13 +105,14 @@ public class CadastroAlunoBean implements Serializable {
 
     }
 
-    public void salvar() {
+    public String salvar() {
         Aluno aluno = new Aluno();  
         try {
-            Aluno.Salvar(aluno);
+            AlunoDAO.salvar(aluno);
         } catch (Exception e) {
+            addMessage("Aluno cadastrado com Sucesso!");
         }
-
+        return null;
     }
 
     public void addMessage(String msg) {
