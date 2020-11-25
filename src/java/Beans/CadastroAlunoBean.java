@@ -13,7 +13,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import org.primefaces.context.RequestContext;
 
-@Named (value = "CadastroAlunoBean")
+@Named (value = "cadastroAlunoBean")
 @ViewScoped
 public class CadastroAlunoBean implements Serializable {
 
@@ -52,13 +52,13 @@ public class CadastroAlunoBean implements Serializable {
 
     }
 
-    public void salvar() {
+    public String salvar() {
         Aluno aluno = new Aluno();  
         try {
             Aluno.Salvar(aluno);
         } catch (Exception e) {
         }
-
+return null;
     }
 
     public void addMessage(String msg) {
