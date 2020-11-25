@@ -46,20 +46,7 @@ public class Turma {
         this.idsemestre = idsemestre;
     }
 
-    /**
-     * @return the idturno
-     */
-    public Integer getIdturno() {
-        return idturno;
-    }
-
-    /**
-     * @param idturno the idturno to set
-     */
-    public void setIdturno(Integer idturno) {
-        this.idturno = idturno;
-    }
-
+  
     public Turma() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -71,16 +58,24 @@ public class Turma {
     private Integer iddisciplina;
     private Integer iddocente;
     private Integer idsemestre;
-    private Integer idturno;     
+    private String idnometurma;     
             
             
-    public Turma (Integer iddisciplina, Integer idsemestre, Integer iddocente, Integer idturno) throws Exception {
+    public Turma (Integer iddisciplina, Integer idsemestre, Integer iddocente, String nometurma) throws Exception {
       setIddisciplina (iddisciplina) ;
       setIdsemestre (idsemestre) ;
       setIddocente (iddocente) ;
-      setIdturno (idturno) ;
+      setNometurma (nometurma) ;
  
     } 
+
+    public String getNomeTurma() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setNometurma(String nometurma) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
