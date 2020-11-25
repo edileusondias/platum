@@ -16,38 +16,34 @@
                     <h:panelGrid columns="4" cellpadding="2">
 
                         <p:outputLabel value="Nome completo" />
-                        <p:inputText />
+                        <p:inputText value="#{CadastroAlunoBean.nomecompleto}"/>
 
                         <p:outputLabel value="Data Nasc." />
-                        <p:inputMask id="date" mask="99/99/9999"/>
+                        <p:inputMask id="date" mask="99/99/9999" value="#{CadastroAlunoBean.datadenascimento}"/>
 
 
                         <p:outputLabel value="Sexo" />
-                        <p:selectOneRadio id="console">
+                        <p:selectOneRadio id="console" value="#{CadastroAlunoBean.idsexo}">
                             <f:selectItem itemLabel="Masculino" itemValue="M" />
                             <f:selectItem itemLabel="Feminino" itemValue="F" />
                             <f:selectItem itemLabel="Indefinido" itemValue="I" />
-
+                        </p:selectOneRadio>
+                        
                             <p:outputLabel  value="CPF" />
-                            <p:inputMask  mask="999.999.999-99"/>
+                            <p:inputMask  mask="999.999.999-99" value="#{CadastroAlunoBean.cpf}"/>
 
-                            </p:selectOneRadio>
+                            
 
                         <p:outputLabel value="Nome Mãe" />
-                        <p:inputText />
+                        <p:inputText value="#{CadastroAlunoBean.nomeMae}"/>
 
                         <p:outputLabel value="Nome Pai" />
-                        <p:inputText />
+                        <p:inputText value="#{CadastroAlunoBean.nomePai}"/>
 
                         <p:outputLabel  value="Telefone:" />
-                        <p:inputMask mask="(99) 99999-9999"/>
+                        <p:inputMask mask="(99) 99999-9999" value="#{CadastroAlunoBean.telefone}"/>
 
-                        <p:outputLabel value="Sexo:" />
-                        <p:inputText />
                         
-                        <p:outputLabel  value="Telefone:" />
-                        <p:inputMask mask="999999"/>
-
                         <h:outputLabel value="Curso" />
                         <h:selectOneMenu id="console" value="" style="width:230px">
                             <f:selectItem itemLabel="Selecione" itemValue="" />
@@ -82,7 +78,7 @@
                     </h:panelGrid>
                 </p:panel>
                 <p:button  value="Limpar"/>
-                <p:button value="Cadastrar"/>
+                <p:button value="Cadastrar" />
                 <p:button  value="Voltar"/>
                 
             </h:form>
