@@ -42,7 +42,7 @@ public class CadastroProfissionalBean implements Serializable {
             addMessage("Dados inseridos com sucesso!");
             return "home";
         } catch (Exception ex) {
-                      addMessage("Dados não inseridos");
+            addMessage("Dados não inseridos");
             Logger.getLogger(CadastroProfissionalBean.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
