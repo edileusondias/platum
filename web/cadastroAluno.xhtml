@@ -17,10 +17,10 @@
                     <h:panelGrid columns="4" cellpadding="2" >
 
                         <p:outputLabel value="Nome completo" />
-                        <p:inputText />
+                        <p:inputText id="nomecompleto" value="#{CadastroAlunoBean.nomecompleto}"/>
 
                         <p:outputLabel value="Data Nasc." />
-                        <p:inputMask mask="99/99/9999" value="#{CadastroAlunoBean.datadenascimento}"/>
+                        <p:inputMask id="datadenascimento" mask="99/99/9999" value="#{CadastroAlunoBean.datadenascimento}"/>
 
 
                         <p:outputLabel value="Sexo" />
@@ -30,58 +30,23 @@
                             <f:selectItem itemLabel="Indefinido" itemValue="I" />
                         </p:selectOneRadio>
                             <p:outputLabel  value="CPF" />
-                            <p:inputMask  mask="999.999.999-99" value="#{CadastroAlunoBean.cpf}"/>
+                            <p:inputMask id="cpf" mask="999.999.999-99" value="#{CadastroAlunoBean.cpf}"/>
 
                             <p:outputLabel  value="RG" />
-                            <p:inputMask  mask="99999999-99" value="#{CadastroAlunoBean.rg}"/>
+                            <p:inputMask id="rg"  mask="99999999-99" value="#{CadastroAlunoBean.rg}"/>
 
                         
 
                         <p:outputLabel value="Nome Mãe" />
-                        <p:inputText value="#{CadastroAlunoBean.nomeMae}"/>
+                        <p:inputText id="nomeMae" value="#{CadastroAlunoBean.nomeMae}"/>
 
                         <p:outputLabel value="Nome Pai" />
-                        <p:inputText value="#{CadastroAlunoBean.nomePai}"/>
+                        <p:inputText id="nomePai" value="#{CadastroAlunoBean.nomePai}"/>
 
                         <p:outputLabel  value="Celular:" />
-                        <p:inputMask mask="(99) 99999-9999" value="#{CadastroAlunoBean.telefone}"/>
+                        <p:inputMask id="telefone" mask="(99) 99999-9999" value="#{CadastroAlunoBean.telefone}"/>
 
-                        <p:outputLabel  value="CEP" />
-                        <p:inputMask  mask="99.999-999" value="#{CadastroAlunoBean.cep}"/>
-
-                        <p:outputLabel  value="Número" />
-                        <p:inputMask  mask="99999" value="#{CadastroAlunoBean.numero}"/>
-
-                        <p:outputLabel value="E-mail" />
-                        <p:inputText value="#{CadastroAlunoBean.email}"/>
-
-                        <p:outputLabel value="Matrícula:" />
-                        <p:inputMask  mask="99999" value="#{CadastroAlunoBean.matricula}"/>
-
-
-                        <h:outputLabel value="Curso" />
-                        <h:selectOneMenu    value="" style="width:230px">
-                            <f:selectItem itemLabel="Selecione" itemValue="" />
-                            <f:selectItem itemLabel="Análise de Sistema" itemValue="Xbox One" />
-                            <f:selectItem itemLabel="Desenvolvimento Web" itemValue="PS4" />
-                            <f:selectItem itemLabel="Desenvolvimento Java" itemValue="Wii U" />
-                        </h:selectOneMenu>
-
-                        <h:outputLabel value="Disciplina" />
-                        <h:selectOneMenu   value="" style="width:230px">
-                            <f:selectItem itemLabel="Selecione" itemValue="" />
-                            <f:selectItem itemLabel="PHP" itemValue="Xbox One" />
-                            <f:selectItem itemLabel="Web" itemValue="PS4" />
-                            <f:selectItem itemLabel="Java" itemValue="Wii U" />
-                        </h:selectOneMenu>
-
-                        <h:outputLabel value="Turma" />
-                        <h:selectOneMenu    style="width:230px">
-                            <f:selectItem itemLabel="Selecione" itemValue="" />
-                            <f:selectItem itemLabel="A" itemValue="Xbox One" />
-                            <f:selectItem itemLabel="B" itemValue="PS4" />
-                            <f:selectItem itemLabel="C" itemValue="Wii U" />
-                        </h:selectOneMenu>
+                        
                     </h:panelGrid>
                 </p:panel>
                 <p:button  value="Limpar"/>

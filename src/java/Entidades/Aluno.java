@@ -16,9 +16,7 @@ public class Aluno {
     private Integer idSexo;
     private String matricula;
     private Integer idStatus;
-    private Integer idDisciplina;
-    private Integer idCurso;
-    private Integer idTurma;
+    
     
     public Aluno (String cpf,  String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, Integer idSexo, String email, String matricula, Integer idstatus) throws Exception {
        setCpf (cpf) ;
