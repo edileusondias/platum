@@ -12,7 +12,7 @@ public class Conexao {
     private static Connection conexao = null; // é a conexão que será fabricada e retornada para o usuario
     private static final String URL_CONNECTION = "jdbc:mysql://127.0.0.1:3306/platum?useSSL=false&serverTimezone=UTC"; // local onde está o banco
     private static final String USER = "root"; // nome da conexão
-    private static final String PASSWORD = "Eddy431494"; // senha da conexão
+    private static final String PASSWORD = "202123"; // senha da conexão
 
     /* Contrutor */
     private Conexao() {

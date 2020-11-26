@@ -26,25 +26,25 @@
                     <p:inputText id="Matricula" value="#{cadastroProfissionalBean.matricula}"/>
 
                     <p:outputLabel  value="Nome Completo" />
-                    <p:inputText id="NomeCompleto" value="#{cadastroprofissionalBean.nomecompleto}" />
+                    <p:inputText id="NomeCompleto" value="#{cadastroProfissionalBean.nome}" />
 
                     <p:outputLabel  value="Data Nascimento: " />
-                    <p:inputMask id="date" value="#{maskView.date}" mask="99/99/9999" value="#{cadastroprofissionalBean.datanascimento}"/>
+                    <p:inputMask id="date" mask="99/99/9999" value="#{cadastroProfissionalBean.datanascimento}"/>
 
                     <p:outputLabel  value="Nome da Mãe:" />
-                    <p:inputText id="nomeMae" value="#{cadastroprofissionalBean.nomeMae}"/>
+                    <p:inputText id="nomeMae" value="#{cadastroProfissionalBean.nomemae}"/>
 
                     <p:outputLabel  value="Sexo:" />
-                    <p:inputText id="sexo" value="#{cadastroprofissionalBean.Sexo}"/>
+                    <p:inputText id="sexo" value="#{cadastroProfissionalBean.sexo}"/>
 
                     <p:outputLabel  value="Telefone: " />
-                    <p:inputMask id="telefone" value="#{maskView.date}" mask="(99)99999-9999" value="#{cadastroprofissionalBean.telefone}"/>
+                    <p:inputMask id="telefone"  mask="(99)99999-9999" value="#{cadastroProfissionalBean.telefone}"/>
 
                     </h:panelGrid>
 
             </p:panel>
             <p:button  value="Limpar"/>
-            <p:commandButton value="Cadastrar" action="#{cadastroProfissionalBean.salvar()}"/>
+            <p:commandButton value="Cadastrar" ajax="false" action="#{cadastroProfissionalBean.salvar()}" process="@form" immediate="true"/>
             <p:button  value="Voltar"/>
            </h:form>
         </div>

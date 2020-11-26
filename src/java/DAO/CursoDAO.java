@@ -34,7 +34,7 @@ public class CursoDAO {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try {
-            ps = conexao.prepareStatement("insert into `platum`.`curso` idcurso=?, descricaocurso=?");//FIXME
+            ps = conexao.prepareStatement("insert into `platum`.`curso` idcurso=?, nome=?");//FIXME
             ps.setInt (1, curso.getId());
             ps.setString (2, curso.getNome());
            

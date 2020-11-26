@@ -31,18 +31,25 @@ public class CadastroTurmaBean implements Serializable {
     }
 
     public String salvar() {
-//        Turma turma = new Turma();
-//        try {
-//            Turma.Salvar(turma);
-//        } catch (Exception e) {
-//        }
+
+        try {
+            Turma.Salvar(new Turma(iddisciplina, iddocente, idsemestre, nometurma));
+            addMessage("Dados inseridos com sucesso!");
+            return "home";
+
+        } catch (Exception ex) {
+            addMessage("Dados não inseridos");
+            Logger.getLogger(CadastroProfissionalBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         return null;
+
     }
 
     public void addMessage(String msg) {
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, msg, null);
         FacesContext.getCurrentInstance().addMessage(null, message);
-        atualizarComponente("msg"); // atualiza o componente de mensagens 
+        atualizarComponente("msg"); // atualiza o componente de mensagens
     }
 
     public void atualizarComponente(String id) {
@@ -80,5 +87,5 @@ public class CadastroTurmaBean implements Serializable {
     public void setNometurma(String nometurma) {
         this.nometurma = nometurma;
     }
-       
+
 }

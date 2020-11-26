@@ -1,22 +1,27 @@
 package Entidades;
 
+import DAO.TurmaDAO;
 import java.util.Date;
 
 public class Turma {
     /* Atributos */
     private Integer disciplinaId;
     private Integer semestreId;
-    private Integer turmaId;
     private Integer docenteId;
     private String nomeTurma;
-            
-    public Turma (Integer disciplina, Integer semestre, Integer codturma, Integer docente, String nomeTurma) throws Exception {
-        setDisciplinaId(disciplina) ;
-        setSemestreId(semestre) ;
-        setTurmaId(codturma) ;
-        setDocenteId(docente) ;
-        setNomeTurma(nomeTurma);
-    } 
+   
+           
+     public Turma (Integer iddisciplina, Integer iddocente, Integer idsemestre, String nometurma){
+       
+        this.disciplinaId = iddisciplina;
+        this.docenteId = iddocente;
+        this.semestreId = idsemestre;
+        this.nomeTurma = nometurma;
+    }
+   
+     public static void Salvar(Turma turma) throws Exception {
+        TurmaDAO.salvar(turma);
+    }
 
     public Integer getDisciplinaId() {
         return disciplinaId;
@@ -32,14 +37,6 @@ public class Turma {
 
     public void setSemestreId(Integer semestreId) {
         this.semestreId = semestreId;
-    }
-
-    public Integer getTurmaId() {
-        return turmaId;
-    }
-
-    public void setTurmaId(Integer turmaId) {
-        this.turmaId = turmaId;
     }
 
     public Integer getDocenteId() {
