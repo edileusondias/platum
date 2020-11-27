@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/template/header.xhtml</file>
-            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Beans/CadastroTurmaBean.java</file>
-            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/DAO/ProfissionalDAO.java</file>
-            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/cadastroProfissional.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Beans/EditarAlunoBean.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/cadastroAluno.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/aluno.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Beans/AlunoBean.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/web/editarAluno.xhtml</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Beans/CadastroAlunoBean.java</file>
+            <file>file:/C:/Users/Cristiane%20Castilho/Documents/NetBeansProjects/git/platum/src/java/Entidades/Aluno.java</file>
         </group>
     </open-files>
 </project-private>
