@@ -4,15 +4,20 @@ import DAO.AlunoDAO;
 import Entidades.Aluno;
 import Entidades.Profissional;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ValueChangeEvent;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import org.primefaces.context.RequestContext;
+import org.primefaces.event.SelectEvent;
 
 @Named (value = "CadastroAlunoBean")
 @ViewScoped
@@ -20,23 +25,25 @@ public class CadastroAlunoBean implements Serializable {
 
     private String cpf;
     private String rg;
-    private Date dataemissao;
-    private String orgaoemissor;
     private String nomecompleto;
-    private Date datadenascimento;
+    private String datadenascimento;
     private String nomeMae;
     private String nomePai;
     private String telefone;
-    private String cep;
-    private String logradouro;
-    private String numero;
-    private String bairro;
-    private Integer idSexo;
-    private String email;
+    private String idSexo;
     private String matricula;
-    private Integer idStatus;
+    private boolean idStatus;
    
+    private List<Aluno> listaDeAlunos; 
+    
     public CadastroAlunoBean(){
+        // primeiro buscar no banco os elementos que estão no conjunto de alunos.
+        try{
+            listaDeAlunos = AlunoDAO.buscar();
+        }
+        catch(Exception ex){
+            
+        }
     }
     
     @PostConstruct
@@ -45,7 +52,7 @@ public class CadastroAlunoBean implements Serializable {
 
     public String salvar(){
          try {
-            Aluno.Salvar(new Aluno());
+            Aluno.Salvar(new Aluno(getCpf(), getNomecompleto(), getDatadenascimento(), getNomeMae(), getNomePai(), getTelefone(), getIdSexo(), "", getMatricula(), true));
             addMessage("Dados inseridos com sucesso!");
             return "home";
         } catch (Exception ex) {
@@ -59,6 +66,10 @@ public class CadastroAlunoBean implements Serializable {
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, msg, null);
         FacesContext.getCurrentInstance().addMessage(null, message);
         atualizarComponente("msg"); // atualiza o componente de mensagens 
+    }
+    
+    public List<Aluno> getAlunos(){
+        return this.listaDeAlunos;
     }
 
     public void atualizarComponente(String id) {
@@ -81,22 +92,6 @@ public class CadastroAlunoBean implements Serializable {
         this.rg = rg;
     }
 
-    public Date getDataemissao() {
-        return dataemissao;
-    }
-
-    public void setDataemissao(Date dataemissao) {
-        this.dataemissao = dataemissao;
-    }
-
-    public String getOrgaoemissor() {
-        return orgaoemissor;
-    }
-
-    public void setOrgaoemissor(String orgaoemissor) {
-        this.orgaoemissor = orgaoemissor;
-    }
-
     public String getNomecompleto() {
         return nomecompleto;
     }
@@ -105,11 +100,11 @@ public class CadastroAlunoBean implements Serializable {
         this.nomecompleto = nomecompleto;
     }
 
-    public Date getDatadenascimento() {
+    public String getDatadenascimento() {
         return datadenascimento;
     }
 
-    public void setDatadenascimento(Date datadenascimento) {
+    public void setDatadenascimento(String datadenascimento) {
         this.datadenascimento = datadenascimento;
     }
 
@@ -137,52 +132,12 @@ public class CadastroAlunoBean implements Serializable {
         this.telefone = telefone;
     }
 
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    public Integer getIdSexo() {
+    public String getIdSexo() {
         return idSexo;
     }
 
-    public void setIdSexo(Integer idSexo) {
+    public void setIdSexo(String idSexo) {
         this.idSexo = idSexo;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getMatricula() {
@@ -193,11 +148,11 @@ public class CadastroAlunoBean implements Serializable {
         this.matricula = matricula;
     }
 
-    public Integer getIdStatus() {
+    public boolean getIdStatus() {
         return idStatus;
     }
 
-    public void setIdStatus(Integer idStatus) {
+    public void setIdStatus(boolean idStatus) {
         this.idStatus = idStatus;
     }
 }

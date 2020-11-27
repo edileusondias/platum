@@ -9,41 +9,38 @@ public class Aluno {
     private Integer id;
     private String cpf;
     private String nomecompleto;
-    private Date datadenascimento;
+    private String datadenascimento;
     private String nomeMae;
     private String nomePai;
     private String telefone;
-    private Integer idSexo;
+    private String idSexo;
     private String matricula;
-    private Integer idStatus;
-    private Integer idDisciplina;
-    private Integer idCurso;
-    private Integer idTurma;
+    private boolean idStatus;
+    private boolean canEdit;
     
-    public Aluno (String cpf,  String nomecompleto, Date datanascimento, String nomemae, String nomepai, String telefone, Integer idsexo, String email, String matricula, Integer idstatus) throws Exception {
+    public Aluno (String cpf,  String nomecompleto, String datanascimento, String nomemae, String nomepai, String telefone, String idSexo, String email, String matricula, boolean idstatus) throws Exception {
        setCpf (cpf) ;
        setNomecompleto (nomecompleto) ;
        setDatadenascimento(datanascimento) ;
        setNomeMae (nomemae) ;
        setNomePai (nomepai) ;
        setTelefone (telefone) ;
-       setIdSexo (idsexo) ;
+       setIdSexo (idSexo) ;
        setMatricula (matricula) ;
        setIdStatus (idstatus) ;      
     }
     
     public static boolean Salvar(Aluno aluno) throws Exception {
+        
         return AlunoDAO.salvar(aluno);
     }
 
-    public Aluno() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
     public Integer getId() {
         return id;
     }
-
+    public void setId(Integer id){
+        this.id = id;
+    }
     public String getCpf() {
         return cpf;
     }
@@ -60,11 +57,11 @@ public class Aluno {
         this.nomecompleto = nomecompleto;
     }
 
-    public Date getDatadenascimento() {
+    public String getDatadenascimento() {
         return datadenascimento;
     }
 
-    public void setDatadenascimento(Date datadenascimento) {
+    public void setDatadenascimento(String datadenascimento) {
         this.datadenascimento = datadenascimento;
     }
 
@@ -92,11 +89,11 @@ public class Aluno {
         this.telefone = telefone;
     }
     
-    public Integer getIdSexo() {
+    public String getIdSexo() {
         return idSexo;
     }
 
-    public void setIdSexo(Integer idSexo) {
+    public void setIdSexo(String idSexo) {
         this.idSexo = idSexo;
     }
 
@@ -108,11 +105,19 @@ public class Aluno {
         this.matricula = matricula;
     }
 
-    public Integer getIdStatus() {
+    public boolean getIdStatus() {
         return idStatus;
     }
 
-    public void setIdStatus(Integer idStatus) {
+    public void setIdStatus(boolean idStatus) {
         this.idStatus = idStatus;
+    }
+
+    public boolean isCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(boolean canEdit) {
+        this.canEdit = canEdit;
     }
 }

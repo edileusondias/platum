@@ -18,26 +18,45 @@ public class AlunoDAO {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try {
-            ps = conexao.prepareStatement("insert into `platum`.`aluno` cpf=?, nome=?, datanasc=?, nomemae=?, nomepai=?, Idsexo=?, telefone=?, status=?");
-
-            ps.setString (2, aluno.getNomecompleto());
+            //ps = conexao.prepareStatement("insert into aluno SET cpf=?, nome=?, datanasc=?, nomemae=?, nomepai=?, sexo=?, telefone=?, status=?");
+            ps = conexao.prepareStatement("insert into aluno(cpf,nome,nomemae,nomepai,sexo,status,telefone,datanasc,mataluno) Values (?, ?, ?,?,?,?,?,?,?)");
+            /*// ps = conexao.prepareStatement("select * from alunoyyy");
+           
+            ps = conexao.prepareStatement("insert into aluno (matAluno) values (?);");
+            ps.setInt(1, 4);
+            ps.setString (1, "79399924572");
+            ps.setString (2, "nome");
+            ps.setString (3, "nomemae");
+            ps.setString (4, "nomePai");
+           // ps.setDate (3, 17/08/1980);
+            ps.setString (5, "F");
+            //ps.setString (7, aluno.getTelefone());
+            ps.setString (6, "A");
+            ps.setInt(7, 2);*/
             ps.setString (1, aluno.getCpf());
-            ps.setDate (3, (Date) aluno.getDatadenascimento());
-            ps.setString (5, aluno.getNomePai());
-            ps.setInt (6, aluno.getIdSexo());
+            ps.setString (2, aluno.getNomecompleto());
+            ps.setString (3, aluno.getNomeMae());
+            ps.setString (4, aluno.getNomePai());
+            ps.setString (5, aluno.getIdSexo());
+            ps.setBoolean (6, aluno.getIdStatus());
             ps.setString (7, aluno.getTelefone());
-            ps.setInt (8, aluno.getIdStatus());
-            ps.setString (4, aluno.getNomeMae());
-            ResultSet resultSet = ps.executeQuery();
-            while (resultSet.next()) {
-                return true;
-            }
+            ps.setString (8, aluno.getDatadenascimento());
+            ps.setString (9, aluno.getMatricula());
+            
+            
+
+            ps.executeUpdate();
+            ps.close();
+            return true;
+            //while (resultSet.next()) {
+                //return true;
+            //}
         } catch (SQLException ex) {
             throw new Exception("Erro na execução do SQL - busca de usuário", ex);
     }
-        return false;
+//        return false;
     }
-     public List<Aluno> buscar() throws Exception {
+     public static List<Aluno> buscar() throws Exception {
         Connection conexao = Conexao.getConnection();
         PreparedStatement ps;
         try {
@@ -48,8 +67,10 @@ public class AlunoDAO {
             ResultSet resultSet = ps.executeQuery();
             
             while (resultSet.next()){
-              Aluno aluno = new Aluno(resultSet.getString("cpf"), resultSet.getString("nome"), resultSet.getDate("datanasc"), resultSet.getString("nomemae"), resultSet.getString("datanasc"), resultSet.getString("telefone"), resultSet.getInt("idsexo"), resultSet.getString("email"), resultSet.getString("matricula"), resultSet.getInt("idstatus"));
-              lista.add(aluno);
+                Aluno aluno = new Aluno(resultSet.getString("cpf"), resultSet.getString("nome"), resultSet.getString("datanasc"), resultSet.getString("nomemae"), resultSet.getString("nomepai"), resultSet.getString("telefone"), resultSet.getString("sexo"), "", resultSet.getString("matAluno"), resultSet.getBoolean("status"));
+                aluno.setId(resultSet.getInt("id"));
+                
+                lista.add(aluno);
             }
             return lista;
         } catch (SQLException ex) {

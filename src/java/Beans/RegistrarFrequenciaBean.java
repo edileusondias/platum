@@ -1,6 +1,7 @@
 package Beans;
 
 import Entidades.Frequencia;
+import Entidades.Profissional;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.logging.Level;
@@ -17,9 +18,9 @@ import org.primefaces.context.RequestContext;
 public class RegistrarFrequenciaBean implements Serializable {
 
     private Integer id;
-    private String idturma;
-    private String idaluno;
-    private String data;
+    private Integer idturma;
+    private Integer idaluno;
+    private Date data;
     private String status;
    
     public RegistrarFrequenciaBean() {
@@ -31,13 +32,16 @@ public class RegistrarFrequenciaBean implements Serializable {
 
     }
 
-    public void salvar() {
-//        Frequencia frequencia = new Frequencia();
-//        
-//        try {
-//            Frequencia.Salvar(frequencia);
-//        } catch (Exception e) {
-//        }
+    public String salvar() {
+  try {
+            Frequencia.Salvar(new Frequencia(id,status,data, idturma, idaluno));
+            addMessage("Dados inseridos com sucesso!");
+            return "home";
+        } catch (Exception ex) {
+            addMessage("Dados não inseridos");
+            Logger.getLogger(RegistrarFrequenciaBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
 
     }
 
@@ -55,26 +59,26 @@ public class RegistrarFrequenciaBean implements Serializable {
         return id;
     }
 
-    public String getidturma() {
+    public Integer getidturma() {
         return idturma;
     }
 
-    public void setidturma(String idturma) {
+    public void setidturma(Integer idturma) {
         this.idturma = idturma;
     }
 
-    public String getidaluno() {
+    public Integer getidaluno() {
         return idaluno;
     }
 
-    public void setidaluno(String idaluno) {
+    public void setidaluno(Integer idaluno) {
         this.idaluno = idaluno;
     }
-    public String getdata() {
+    public Date getdata() {
         return data;
     }
 
-    public void setdata(String data) {
+    public void setdata(Date data) {
         this.data = data;
     }
 

@@ -10,6 +10,10 @@
     <ui:define name="content">
 
         <div>
+            <f:metadata>
+                <f:viewParam name="aluno" value="#{alunoBean.aluno}"/>           
+                <!--<f:viewParam name="playersurnameparam" value="#{playersBean.playerSurname}"/>-->
+            </f:metadata>
             <h:form id="formAluno" >
                 <p:growl id="msg"/>
                 <p:panel header="Cadastrar Aluno" style="margin:  auto;">                    
@@ -17,47 +21,46 @@
                     <h:panelGrid columns="4" cellpadding="2" >
 
                         <p:outputLabel value="Nome completo" />
-                        <p:inputText id="nomecompleto" value="#{CadastroAlunoBean.nomecompleto}"/>
+                        <p:inputText id="nomecompleto" value="#{alunoBean.aluno}"/>
 
                         <p:outputLabel value="Data Nasc." />
-                        <p:inputMask id="datadenascimento" mask="99/99/9999" value="#{CadastroAlunoBean.datadenascimento}"/>
-
+                        <p:inputMask id="datadenascimento" mask="99/99/9999" value="#{$aluno}"/>
 
                         <p:outputLabel value="Sexo" />
-                        <p:selectOneRadio   value="#{CadastroAlunoBean.idSexo}">
+                        <p:selectOneRadio   value="#{editarAlunoBean.idSexo}">
                             <f:selectItem itemLabel="Masculino" itemValue="M" />
                             <f:selectItem itemLabel="Feminino" itemValue="F" />
                             <f:selectItem itemLabel="Indefinido" itemValue="I" />
                         </p:selectOneRadio>
                         <p:outputLabel  value="CPF" />
-                        <p:inputMask id="cpf" mask="999.999.999-99" value="#{CadastroAlunoBean.cpf}"/>
+                        <p:inputMask id="cpf" mask="999.999.999-99" value="#{editarAlunoBean.cpf}"/>
 
                         <p:outputLabel  value="RG" />
-                        <p:inputMask id="rg"  mask="99999999-99" value="#{CadastroAlunoBean.rg}"/>
+                        <p:inputMask id="rg"  mask="99999999-99" value="#{editarAlunoBean.rg}"/>
 
                         <p:outputLabel value="Nome Mãe" />
-                        <p:inputText id="nomeMae" value="#{CadastroAlunoBean.nomeMae}"/>
+                        <p:inputText id="nomeMae" value="#{editarAlunoBean.nomeMae}"/>
 
                         <p:outputLabel value="Nome Pai" />
-                        <p:inputText id="nomePai" value="#{CadastroAlunoBean.nomePai}"/>
+                        <p:inputText id="nomePai" value="#{editarAlunoBean.nomePai}"/>
 
                         <p:outputLabel  value="Matricula" />
-                        <p:inputText id="matricula" value="#{CadastroAlunoBean.matricula}"/>
+                        <p:inputText id="matricula" value="#{editarAlunoBean.matricula}"/>
 
                         <p:outputLabel  value="Celular:" />
-                        <p:inputMask id="telefone" mask="(99) 99999-9999" value="#{CadastroAlunoBean.telefone}"/>
+                        <p:inputMask id="telefone" mask="(99) 99999-9999" value="#{editarAlunoBean.telefone}"/>
 
                         <p:selectBooleanCheckbox id="idStatuss" value="false" itemLabel="Desativado">
-                            <p:ajax update="msg" listener="#{CadastroAlunoBean.bla(cpf)}"/>
+                            <p:ajax update="msg" listener="#{editarAlunoBean.bla(cpf)}"/>
                         </p:selectBooleanCheckbox>
 
                     </h:panelGrid>
                 </p:panel>
                 <p:button  value="Limpar"/>
-                <p:commandButton value="Cadastrar" action="#{CadastroAlunoBean.salvar()}" />
+                <p:commandButton value="Cadastrar" action="#{editarAlunoBean.salvar()}" />
                 <p:button  value="Voltar"/>
 
-                <p:dataTable var="aluno" value="#{CadastroAlunoBean.alunos}" rowKey="#{aluno.id}" >
+                <p:dataTable var="aluno" value="#{editarAlunoBean.alunos}" rowKey="#{aluno.id}" >
 
                     <p:column>
                         <f:facet name="header">Matricula</f:facet>
@@ -72,7 +75,7 @@
                     <p:column>
                         <f:facet name="header">Desativado</f:facet>
                         <p:selectBooleanCheckbox id="selSubject" value="${!aluno.idStatus}" itemLabel="Desativado">
-                            <p:ajax event="change" listener="#{CadastroAlunoBean.bla(aluno)}"/>
+                            <p:ajax event="change" listener="#{editarAlunoBean.bla(aluno)}"/>
                         </p:selectBooleanCheckbox>
                     </p:column>
 
@@ -80,5 +83,9 @@
 
             </h:form>
         </div>
+
+
     </ui:define>
+
+
 </ui:decorate>

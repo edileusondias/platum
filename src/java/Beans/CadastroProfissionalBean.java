@@ -24,7 +24,7 @@ public class CadastroProfissionalBean implements Serializable {
     private Date datanascimento;
     private String nomemae;
     private String sexo;
-    private Integer telefone;
+    private String telefone;
    
     public CadastroProfissionalBean() {
 
@@ -38,7 +38,7 @@ public class CadastroProfissionalBean implements Serializable {
     public String salvar() {
 //        
         try {
-            Profissional.Salvar(new Profissional(id, nome, matricula, CPF, RG, datanascimento, nomemae, sexo, nome, CPF, matricula, nome, RG));
+            Profissional.Salvar(new Profissional(id, nome, matricula, CPF, RG, datanascimento, nomemae, sexo, telefone));
             addMessage("Dados inseridos com sucesso!");
             return "home";
         } catch (Exception ex) {
@@ -118,11 +118,11 @@ public class CadastroProfissionalBean implements Serializable {
         this.sexo = sexo;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
